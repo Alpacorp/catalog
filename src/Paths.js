@@ -3,7 +3,7 @@ import './App.css';
 import Layout from './Containers/Layout';
 import Home from './Pages/Home';
 
-const App = () => {
+const Paths = () => {
   return (
     <>
       <Layout>
@@ -15,4 +15,4 @@ const App = () => {
   );
 }
 
-export default App;
+export default Paths;
