@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Paths from './Paths';
+import Paths from './Containers/Paths';
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(

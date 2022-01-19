@@ -1,0 +1,16 @@
+
+.hero-banner figure, .hero-profile figure {
+  margin-block: 0;
+  margin-inline: 0;
+}
+
+.hero-banner img {
+  width: 100%;
+}
+
+.hero-profile img {
+  background-color: blanchedalmond;
+  max-width: 100px;
+  margin-block-start: -100px;
+  padding: 5px;
+}
