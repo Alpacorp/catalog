@@ -1,7 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
-import Layout from './Containers/Layout';
-import Home from './Pages/Home';
+import Layout from './Layout';
+import Home from '../Pages/Home';
 
 const Paths = () => {
   return (
