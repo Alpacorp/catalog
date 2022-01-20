@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "category": "Patines"
+    },
+    {
+      "id": 2,
+      "category": "Balacas"
+    },
+    {
+      "id": 3,
+      "category": "Gorros"
+    },
+    {
+      "id": 4,
+      "category": "Medias"
+    },
+    {
+      "id": 5,
+      "category": "Ropa"
+    }
+  ]
+}
