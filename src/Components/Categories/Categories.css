@@ -1,0 +1,13 @@
+
+.categories ul {
+  display: flex;
+  flex-direction: row;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+}
+
+.categories ul li {
+  list-style: none;
+  margin-inline-start: 20px;
+  cursor: pointer;
+}

@@ -1,5 +1,5 @@
 import './Header.css';
-import { BannerMain, Profile } from './assets';
+import { BannerMain, Profile } from '../assets';
 
 const Header = () => {
   return (

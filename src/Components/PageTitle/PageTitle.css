@@ -1,0 +1,8 @@
+
+.title-big h1 {
+  text-transform: uppercase;
+}
+
+.title-small h1 {
+  font-size: 15px;
+}
