@@ -19,8 +19,12 @@ const Home = () => {
           <PageTitle titleText={'Creaciones Jiomarcita'} styleType={'title-big'} />
           <PageTitle titleText={'Catálogo'} styleType={'title-small'} />
         </div>
-        <Product />
-        <Footer />
+        <div className='products'>
+          <Product />
+        </div>
+        <div className='footer'>
+          <Footer />
+        </div>
       </div>
     </>
   );
