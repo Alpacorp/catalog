@@ -3,7 +3,7 @@
 const Footer = () => {
   return (
     <>
-      <section className='footer'>
+      <section className='footer-info'>
         <div>
           <h2>
             Footer

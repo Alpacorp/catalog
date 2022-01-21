@@ -5,6 +5,6 @@
   margin: auto;
 }
 
-.title-store {
+.title-store, .products, .footer {
   margin: 20px;
 }
