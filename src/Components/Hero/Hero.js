@@ -1,7 +1,7 @@
-import './Header.css';
+import './Hero.css';
 import { BannerMain, Profile } from '../assets';
 
-const Header = () => {
+const Hero = () => {
   return (
     <>
       <section className='hero'>
@@ -24,4 +24,4 @@ const Header = () => {
   )
 }
 
-export default Header;
+export default Hero;

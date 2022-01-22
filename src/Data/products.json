@@ -1,0 +1,78 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "Patines",
+      "price": "30000",
+      "description": "Hermosos patines en lana de oveja virgen confeccionados con tradición, amor y dedicación para  que hagas parte y uses nuestra prenda de calidad  y comodidad garantizada.",
+      "features": [
+        "suaves",
+        "antialergénicos",
+        "coloridos"
+      ],
+      "tags": [
+        "suaves",
+        "patines",
+        "tejidos",
+        "bebés"
+      ],
+      "image": "https://i.ytimg.com/vi/6wp0Qr6bjog/hqdefault.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Gorros de lana",
+      "price": "20000",
+      "description": "Tupidos y coloridos gorros de lana para que te protejas del frío con el mejor estilo y calidad que te podemos ofrecer, de nuestras manos a tu puerta.",
+      "features": [
+        "Tres hillos",
+        "antialergénicos",
+        "cálidos",
+        "personalizados",
+        "muy suaves"
+      ],
+      "tags": [
+        "gorros",
+        "lana",
+        "tejidos",
+        "adultos"
+      ],
+      "image": "https://m.media-amazon.com/images/I/71f2qZRCAZL._AC_UX385_.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Patines",
+      "price": "30000",
+      "description": "Patines tejidos en lana",
+      "features": [
+        "suaves",
+        "antialergénicos",
+        "coloridos"
+      ],
+      "tags": [
+        "suaves",
+        "patines",
+        "tejidos",
+        "bebés"
+      ],
+      "image": "https://i.ytimg.com/vi/6wp0Qr6bjog/hqdefault.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Patines",
+      "price": "30000",
+      "description": "Patines tejidos en lana",
+      "features": [
+        "suaves",
+        "antialergénicos",
+        "coloridos"
+      ],
+      "tags": [
+        "suaves",
+        "patines",
+        "tejidos",
+        "bebés"
+      ],
+      "image": "https://i.ytimg.com/vi/6wp0Qr6bjog/hqdefault.jpg"
+    }
+  ]
+}

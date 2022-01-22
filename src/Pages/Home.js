@@ -1,11 +1,12 @@
 import React from 'react';
 import Categories from '../Components/Categories/Categories';
-import Footer from '../Components/Footer';
-import Header from '../Components/Header/Header';
+import Footer from '../Components/Footer/Footer';
+import Hero from '../Components/Hero/Hero';
 import PageTitle from '../Components/PageTitle/PageTitle';
-import Product from '../Components/Product';
-import './Home.css';
+import Product from '../Components/Product/Product';
 import Data from '../Data/categories.json';
+import Products from '../Data/products.json';
+import './Home.css';
 
 console.log("Data", Data);
 
@@ -13,14 +14,14 @@ const Home = () => {
   return (
     <>
       <div className='main'>
-        <Header />
+        <Hero />
         <Categories categories={Data} />
         <div className='title-store'>
-          <PageTitle titleText={'Creaciones Jiomarcita'} styleType={'title-big'} />
+          <PageTitle titleText={'Creaciones la Oveja Calva 🐑'} styleType={'title-big'} />
           <PageTitle titleText={'Catálogo'} styleType={'title-small'} />
         </div>
         <div className='products'>
-          <Product />
+          <Product products={Products} />
         </div>
         <div className='footer'>
           <Footer />
