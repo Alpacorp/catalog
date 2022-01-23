@@ -8,8 +8,6 @@ import Data from '../Data/categories.json';
 import Products from '../Data/products.json';
 import './Home.css';
 
-console.log("Data", Data);
-
 const Home = () => {
   return (
     <>

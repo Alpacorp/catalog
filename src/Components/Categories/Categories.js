@@ -2,19 +2,14 @@ import PropTypes from 'prop-types';
 import './Categories.css';
 
 const Categories = ({ categories }) => {
-  console.log("categories", categories, typeof categories);
   return (
     <>
       <section className='categories'>
         <ul>
           {
-            categories.data.map(({ id, category }) => {
-              return (
-                <>
-                  <li key={id}>{category}</li>
-                </>
-              )
-            })
+            categories.data.map(({ id, category }) =>
+              <li key={id + category}>{category}</li>
+            )
           }
         </ul>
       </section>
@@ -23,7 +18,7 @@ const Categories = ({ categories }) => {
 }
 
 Categories.propTypes = {
-  categories: PropTypes.array.isRequired
+  categories: PropTypes.object.isRequired
 };
 
 export default Categories;
