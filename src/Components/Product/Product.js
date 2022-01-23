@@ -1,4 +1,5 @@
 import './Product.css';
+import { formatPrice } from '../../utils/formatPrice.';
 
 const Product = ({ products }) => {
   // console.log(products);
@@ -16,7 +17,7 @@ const Product = ({ products }) => {
                 </div>
                 <div className='product-info'>
                   <h2>{name}</h2>
-                  <h3>{price}</h3>
+                  <h3>{formatPrice.format(price)}</h3>
                   <p className='description'>{description}</p>
                   <div className='features'>
                     {

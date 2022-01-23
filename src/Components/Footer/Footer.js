@@ -1,14 +1,13 @@
-
+import './Footer.css';
 
 const Footer = () => {
   return (
     <>
       <section className='footer-info'>
-        <div>
-          <h2>
-            Footer
-          </h2>
-        </div>
+        <footer>
+          <h2>Diseñado y creado por Alpacorp</h2>
+          <h4>Todos los derechos reservados | {new Date().getFullYear()}</h4>
+        </footer>
       </section>
     </>
   )
