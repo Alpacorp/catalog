@@ -2,6 +2,7 @@
   "data": [
     {
       "id": 1,
+      "category": 1,
       "name": "Patines",
       "price": "30000",
       "description": "Hermosos patines en lana de oveja virgen confeccionados con tradición, amor y dedicación para  que hagas parte y uses nuestra prenda de calidad  y comodidad garantizada.",
@@ -20,6 +21,7 @@
     },
     {
       "id": 2,
+      "category": 3,
       "name": "Gorros de lana",
       "price": "20000",
       "description": "Tupidos y coloridos gorros de lana para que te protejas del frío con el mejor estilo y calidad que te podemos ofrecer, de nuestras manos a tu puerta.",
@@ -40,6 +42,7 @@
     },
     {
       "id": 3,
+      "category": 4,
       "name": "Bufanda",
       "price": "10000",
       "description": "Tejida en lana de alta calidad para que no solo de protejas sino que lleves contigo el mejor estilo.",
@@ -57,6 +60,7 @@
     },
     {
       "id": 4,
+      "category": 2,
       "name": "Balacas",
       "price": "12500",
       "description": "Personalizadas tanto en color, tamaño y forma para que luzcas el mejor estilo y calidad.",

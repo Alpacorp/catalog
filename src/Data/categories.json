@@ -1,6 +1,10 @@
 {
   "data": [
     {
+      "id": 0,
+      "category": "Todo"
+    },
+    {
       "id": 1,
       "category": "Patines"
     },
@@ -14,11 +18,7 @@
     },
     {
       "id": 4,
-      "category": "Medias"
-    },
-    {
-      "id": 5,
-      "category": "Ropa"
+      "category": "Bufandas"
     }
   ]
 }
