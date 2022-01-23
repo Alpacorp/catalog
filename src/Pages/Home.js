@@ -23,9 +23,7 @@ const Home = () => {
         <div className='products'>
           <Product products={Products} />
         </div>
-        <div className='footer'>
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </>
   );

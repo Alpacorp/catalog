@@ -40,9 +40,9 @@
     },
     {
       "id": 3,
-      "name": "Patines",
-      "price": "30000",
-      "description": "Patines tejidos en lana",
+      "name": "Bufanda",
+      "price": "10000",
+      "description": "Tejida en lana de alta calidad para que no solo de protejas sino que lleves contigo el mejor estilo.",
       "features": [
         "suaves",
         "antialergénicos",
@@ -50,29 +50,28 @@
       ],
       "tags": [
         "suaves",
-        "patines",
-        "tejidos",
-        "bebés"
+        "balacas",
+        "tejidos"
       ],
-      "image": "https://i.ytimg.com/vi/6wp0Qr6bjog/hqdefault.jpg"
+      "image": "https://i.ytimg.com/an/sWAcz7pPW3s/e0269e4b-ed03-45be-80a5-5968795a4668_mq.jpg?v=59491e2c"
     },
     {
       "id": 4,
-      "name": "Patines",
-      "price": "30000",
-      "description": "Patines tejidos en lana",
+      "name": "Balacas",
+      "price": "12500",
+      "description": "Personalizadas tanto en color, tamaño y forma para que luzcas el mejor estilo y calidad.",
       "features": [
-        "suaves",
-        "antialergénicos",
-        "coloridos"
+        "largas",
+        "cortas",
+        "medianas"
       ],
       "tags": [
         "suaves",
-        "patines",
+        "balacas",
         "tejidos",
-        "bebés"
+        "jóvenes"
       ],
-      "image": "https://i.ytimg.com/vi/6wp0Qr6bjog/hqdefault.jpg"
+      "image": "https://i2.wp.com/todocrochet.store/wp-content/uploads/2019/06/diadema-gris-crochet.jpg?resize=300%2C300&ssl=1"
     }
   ]
 }
