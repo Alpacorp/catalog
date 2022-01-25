@@ -5,7 +5,7 @@ const PageTitle = ({ titleText, styleType }) => {
   return (
     <>
       <section className={styleType}>
-        <h1>{titleText}</h1>
+        <h1 aria-label={titleText} tabIndex='0'>{titleText}</h1>
       </section>
     </>
   )
