@@ -13,14 +13,16 @@ const Home = () => {
     <>
       <div className='main'>
         <Hero />
-        <Categories categories={Data} />
-        <div className='title-store'>
-          <PageTitle titleText={'Creaciones la Oveja Calva 🐑'} styleType={'title-big'} />
-          <PageTitle titleText={'Catálogo'} styleType={'title-small'} />
-        </div>
-        <div className='products'>
-          <Product products={Products} />
-        </div>
+        <main>
+          <div className='title-store'>
+            <PageTitle titleText={'Creaciones la Oveja Calva 🐑'} styleType={'title-big'} />
+            <PageTitle titleText={'Catálogo'} styleType={'title-small'} />
+            <Categories categories={Data} />
+          </div>
+          <div className='products'>
+            <Product products={Products} />
+          </div>
+        </main>
         <Footer />
       </div>
     </>

@@ -5,10 +5,10 @@ const Categories = ({ categories }) => {
   return (
     <>
       <section className='categories'>
-        <ul>
+        <ul tabIndex='0'>
           {
             categories.data.map(({ id, category }) =>
-              <li key={id + category}>{category}</li>
+              <li aria-label={category} key={id + category}><a href='/'>{category}</a></li>
             )
           }
         </ul>
