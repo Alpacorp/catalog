@@ -5,13 +5,15 @@ const Categories = ({ categories }) => {
   return (
     <>
       <section className='categories'>
-        <ul tabIndex='0'>
-          {
-            categories.data.map(({ id, category }) =>
-              <li aria-label={category} key={id + category}><a href='/'>{category}</a></li>
-            )
-          }
-        </ul>
+        <nav>
+          <ul tabIndex='0'>
+            {
+              categories.data.map(({ id, category }) =>
+                <li aria-label={category} key={id + category}><a href='/'>{category}</a></li>
+              )
+            }
+          </ul>
+        </nav>
       </section>
     </>
   );

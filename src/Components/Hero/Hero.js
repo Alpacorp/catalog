@@ -4,7 +4,7 @@ import { BannerMain, Profile } from '../assets';
 const Hero = () => {
   return (
     <>
-      <section className='hero'>
+      <header className='hero'>
         <div className='hero-banner' tabIndex='0'>
           <div>
             <figure>
@@ -19,7 +19,7 @@ const Hero = () => {
             </figure>
           </div>
         </div>
-      </section>
+      </header>
     </>
   )
 }
