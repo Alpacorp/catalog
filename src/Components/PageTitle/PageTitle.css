@@ -6,3 +6,9 @@
 .title-small h1 {
   font-size: 15px;
 }
+
+@media screen and (max-width: 380px) {
+  .title-big h1{
+    font-size: 20px;
+  }
+}
