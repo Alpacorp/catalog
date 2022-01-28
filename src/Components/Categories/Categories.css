@@ -1,4 +1,3 @@
-
 .categories ul {
   display: flex;
   flex-direction: row;
@@ -12,8 +11,12 @@
   cursor: pointer;
 }
 
+.categories ul li a {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 450px) {
   .categories nav {
-    overflow: auto;
+    overflow: scroll;
   }
 }

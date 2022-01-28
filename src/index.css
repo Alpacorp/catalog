@@ -1,14 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:wght@200;300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@200;300;400;500&display=swap");
 
 html {
   scroll-behavior: smooth;
-  font-family: 'Exo', sans-serif;
+  font-family: "Exo", sans-serif;
 }
 
 body {
   margin: 0 50px;
-  background-color: gray;
-
+  background-color: rgb(233, 230, 230);
 }
 
 @media screen and (max-width: 900px) {
