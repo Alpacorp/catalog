@@ -3,6 +3,7 @@ import "./Product.css";
 import { formatPrice } from "../../utils/formatPrice.";
 
 const Product = ({ products }) => {
+  console.log("cargue de producto");
   return (
     <>
       {products.data.map(

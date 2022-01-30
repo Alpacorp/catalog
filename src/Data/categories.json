@@ -2,23 +2,28 @@
   "data": [
     {
       "id": 0,
-      "category": "Todo"
+      "category": "Todo",
+      "image":"https://www.flaticon.com/free-icons/all"
     },
     {
       "id": 1,
-      "category": "Patines"
+      "category": "Patines",
+      "image":"https://www.flaticon.es/iconos-gratis/patines"
     },
     {
       "id": 2,
-      "category": "Balacas"
+      "category": "Balacas",
+      "image":"https://www.flaticon.es/iconos-gratis/cetro"
     },
     {
       "id": 3,
-      "category": "Gorros"
+      "category": "Gorros",
+      "image":"https://www.flaticon.es/iconos-gratis/gorro-de-navidad"
     },
     {
       "id": 4,
-      "category": "Bufandas"
+      "category": "Bufandas",
+      "image": "https://www.flaticon.es/iconos-gratis/silenciador"
     }
   ]
 }
