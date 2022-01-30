@@ -1,6 +1,7 @@
 import "./Footer.css";
 
 const Footer = () => {
+  console.log("cargue de footer");
   return (
     <>
       <footer className="footer-info" tabIndex="0">

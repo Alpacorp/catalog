@@ -1,3 +1,7 @@
+.categories nav {
+  overflow: auto;
+}
+
 .categories ul {
   display: flex;
   flex-direction: row;
@@ -5,18 +9,28 @@
   padding-inline-start: 0;
 }
 
+.categories ul img {
+  width: 100px;
+}
+
 .categories ul li {
   list-style: none;
   margin-inline-start: 20px;
   cursor: pointer;
+  text-align: center;
+  font-weight: 500;
 }
 
 .categories ul li a {
   text-decoration: none;
+  color: #000;
+}
+
+@media screen and (max-width: 690px) {
 }
 
 @media screen and (max-width: 450px) {
-  .categories nav {
-    overflow: scroll;
+  .categories ul img {
+    width: 70px;
   }
 }
