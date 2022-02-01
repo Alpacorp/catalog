@@ -24,6 +24,16 @@
       "id": 4,
       "category": "Bufandas",
       "image": "https://www.flaticon.es/iconos-gratis/silenciador"
+    },
+    {
+      "id": 5,
+      "category": "Promociones",
+      "image": "https://www.flaticon.es/iconos-gratis/silenciador"
+    },
+    {
+      "id": 6,
+      "category": "Descuentos",
+      "image": "https://www.flaticon.es/iconos-gratis/silenciador"
     }
   ]
 }
