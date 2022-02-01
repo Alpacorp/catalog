@@ -6,8 +6,8 @@ const Modalproduct = () => {
   return (
     <div className="modal">
       <div className="container">
-        <h2>Nombre producto</h2>
-        <h3>Precio Producto</h3>
+        <header>Nombre producto</header>
+        <h3>Precio Producto w</h3>
         <figure>
           <img src={gorroImage} alt={gorroImage} />
         </figure>
