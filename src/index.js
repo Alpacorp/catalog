@@ -1,14 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import Paths from './Containers/Paths';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./Containers/AppRoutes";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Paths />
+      <AppRoutes />
     </BrowserRouter>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
