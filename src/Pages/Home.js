@@ -15,6 +15,7 @@ const Home = () => {
       <div className="main">
         <Modalproduct />
         <Hero />
+        <Hero />
         <main>
           <div className="title-store">
             <PageTitle
