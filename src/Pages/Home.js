@@ -3,6 +3,7 @@ import Categories from "../Components/Categories/Categories";
 import Footer from "../Components/Footer/Footer";
 import Hero from "../Components/Hero/Hero";
 import Modalproduct from "../Components/ModalProduct/ModalProduct";
+import PageSubtitle from "../Components/PageSubtitle/PageSubtitle";
 import PageTitle from "../Components/PageTitle/PageTitle";
 import Product from "../Components/Product/Product";
 import Data from "../Data/categories.json";
@@ -15,14 +16,13 @@ const Home = () => {
       <div className="main">
         <Modalproduct />
         <Hero />
-        <Hero />
         <main>
           <div className="title-store">
             <PageTitle
               titleText={"Creaciones la Oveja Calva"}
               styleType={"title-big"}
             />
-            <PageTitle titleText={"Catálogo"} styleType={"title-small"} />
+            <PageSubtitle titleText={"Catálogo"} styleType={"title-small"} />
             <Categories categories={Data} />
           </div>
           <div className="products">

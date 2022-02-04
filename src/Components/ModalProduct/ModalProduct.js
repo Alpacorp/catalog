@@ -4,15 +4,24 @@ import "./ModalProduct.css";
 
 const Modalproduct = () => {
   return (
-    <div className="modal">
+    <section className="modal">
       <div className="container">
-        <header>Nombre producto</header>
+        <div className="header">
+          <header>Nombre producto</header>
+          <div className="close-icon">X</div>
+        </div>
         <h3>Precio Producto w</h3>
         <figure>
           <img src={gorroImage} alt={gorroImage} />
         </figure>
+        <div>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae
+          totam ipsum amet, quia quidem maxime facilis tempora iste debitis et
+          mollitia dicta reprehenderit dolore neque nihil, id voluptatum est
+          laboriosam.
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
