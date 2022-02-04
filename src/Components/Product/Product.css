@@ -112,6 +112,7 @@
 .product-info .product-button button {
   background-color: rgb(88 243 190);
   color: #000;
+  cursor: pointer;
   padding: 5px;
   max-width: 200px;
   width: 100%;

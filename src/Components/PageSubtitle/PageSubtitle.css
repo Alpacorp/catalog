@@ -1,0 +1,13 @@
+.title-big h2 {
+  text-transform: uppercase;
+}
+
+.title-small h2 {
+  font-size: 15px;
+}
+
+@media screen and (max-width: 380px) {
+  .title-big h2 {
+    font-size: 20px;
+  }
+}

@@ -1,18 +1,18 @@
 .modal {
   position: fixed;
-  background-color: salmon;
-  margin: auto;
+  top: 0;
+  left: 0;
   text-align: center;
   width: 100%;
   height: 100vh;
-  /* display: flex; */
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 0;
-  flex-direction: column;
-  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.12);
   transition: all 500ms ease;
+  /* opacity: 0; */
+  /* visibility: hidden; */
 }
 
 .modal .container {
@@ -20,5 +20,16 @@
   height: 500px;
   margin: auto;
   background-color: #fff;
-  box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.6);
+  box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.05);
+  transition: all 500ms ease;
+}
+
+.container .header {
+  display: flex;
+  justify-content: space-between;
+  background-color: salmon;
+}
+
+.header .close-icon {
+  cursor: pointer;
 }

@@ -1,9 +1,12 @@
 import PropTypes from "prop-types";
 import "./Product.css";
 import { formatPrice } from "../../utils/formatPrice.";
+import Modalproduct from "../ModalProduct/ModalProduct";
+// import { useState } from "react";
 
 const Product = ({ products }) => {
   console.log("cargue de producto");
+  // const [show, setShow] = useState(false);
   return (
     <>
       {products.data?.map(
@@ -87,6 +90,7 @@ const Product = ({ products }) => {
                 <button>Pedir</button>
               </div>
             </div>
+            <Modalproduct />
           </section>
         )
       )}
