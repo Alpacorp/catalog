@@ -1,12 +1,15 @@
+import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import "./Product.css";
 import { formatPrice } from "../../utils/formatPrice.";
-import Modalproduct from "../ModalProduct/ModalProduct";
-// import { useState } from "react";
+import ModalProduct from "../ModalProduct/ModalProduct";
 
 const Product = ({ products }) => {
   console.log("cargue de producto");
-  // const [show, setShow] = useState(false);
+  const [modalState, setModalState] = useState(false);
+  const showHide = useCallback(() => {
+    setModalState(!modalState);
+  }, [modalState]);
   return (
     <>
       {products.data?.map(
@@ -87,10 +90,13 @@ const Product = ({ products }) => {
                 ))}
               </div>
               <div className="product-button">
-                <button>Pedir</button>
+                <button onClick={showHide}>Pedir</button>
               </div>
             </div>
-            <Modalproduct />
+            <ModalProduct
+              modalState={modalState}
+              setModalState={setModalState}
+            />
           </section>
         )
       )}

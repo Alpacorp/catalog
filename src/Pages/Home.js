@@ -1,8 +1,6 @@
-import React from "react";
 import Categories from "../Components/Categories/Categories";
 import Footer from "../Components/Footer/Footer";
 import Hero from "../Components/Hero/Hero";
-import Modalproduct from "../Components/ModalProduct/ModalProduct";
 import PageSubtitle from "../Components/PageSubtitle/PageSubtitle";
 import PageTitle from "../Components/PageTitle/PageTitle";
 import Product from "../Components/Product/Product";
@@ -14,7 +12,6 @@ const Home = () => {
   return (
     <>
       <div className="main">
-        <Modalproduct />
         <Hero />
         <main>
           <div className="title-store">
