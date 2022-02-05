@@ -10,6 +10,9 @@ const Product = ({ products }) => {
   const showHide = useCallback(() => {
     setModalState(!modalState);
   }, [modalState]);
+  // const showHide = () => {
+  //   setModalState(!modalState);
+  // };
   return (
     <>
       {products.data?.map(
@@ -93,13 +96,10 @@ const Product = ({ products }) => {
                 <button onClick={showHide}>Pedir</button>
               </div>
             </div>
-            <ModalProduct
-              modalState={modalState}
-              setModalState={setModalState}
-            />
           </section>
         )
       )}
+      <ModalProduct modalState={modalState} setModalState={setModalState} />
     </>
   );
 };
