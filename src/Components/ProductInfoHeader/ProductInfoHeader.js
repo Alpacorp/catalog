@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import "./ProductInfoHeader.css";
 
 const ProductInfoHeader = ({ promo, name }) => {
@@ -25,6 +25,6 @@ const ProductInfoHeader = ({ promo, name }) => {
   );
 };
 
-ProductInfoHeader.propTypes = {};
+// ProductInfoHeader.propTypes = {};
 
 export default ProductInfoHeader;
