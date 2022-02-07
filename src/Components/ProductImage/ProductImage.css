@@ -1,0 +1,26 @@
+.product-image {
+  width: auto;
+}
+
+.product-image img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 180px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 750px) {
+  .product-image {
+    width: auto;
+  }
+
+  .product-image figure {
+    margin: 10px;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: auto;
+  }
+}
