@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import "./Product.css";
 import { formatPrice } from "../../utils/formatPrice.";
 import ModalProduct from "../ModalProduct/ModalProduct";
+import ProductImage from "../ProductImage/ProductImage";
+import ProductInfoHeader from "../ProductInfoHeader/ProductInfoHeader";
 
 const Product = ({ products }) => {
   console.log("cargue de producto");
@@ -28,28 +30,9 @@ const Product = ({ products }) => {
           promo,
         }) => (
           <section className="product" key={id + "product"} tabIndex="0">
-            <div className="product-image" key={id + "image"} tabIndex="0">
-              <figure>
-                <img src={image} alt={name} />
-              </figure>
-            </div>
+            <ProductImage id={id} image={image} name={name} />
             <div className="product-info" key={id + "info"} tabIndex="0">
-              <div className="info-header">
-                {promo ? (
-                  <>
-                    <h2 aria-label={name} tabIndex="0">
-                      {name}
-                    </h2>
-                    <h4 aria-label={name} tabIndex="0">
-                      En descuento
-                    </h4>
-                  </>
-                ) : (
-                  <h2 aria-label={name} tabIndex="0">
-                    {name}
-                  </h2>
-                )}
-              </div>
+              <ProductInfoHeader promo={promo} name={name} />
               <div className="product-price">
                 {discount ? (
                   <>
