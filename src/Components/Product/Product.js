@@ -5,6 +5,9 @@ import { formatPrice } from "../../utils/formatPrice.";
 import ModalProduct from "../ModalProduct/ModalProduct";
 import ProductImage from "../ProductImage/ProductImage";
 import ProductInfoHeader from "../ProductInfoHeader/ProductInfoHeader";
+import PriceDiscount from "../PriceDiscount/PriceDiscount";
+import Price from "../Price/Price";
+import Description from "../Description/Description";
 
 const Product = ({ products }) => {
   console.log("cargue de producto");
@@ -12,9 +15,6 @@ const Product = ({ products }) => {
   const showHide = useCallback(() => {
     setModalState(!modalState);
   }, [modalState]);
-  // const showHide = () => {
-  //   setModalState(!modalState);
-  // };
   return (
     <>
       {products.data?.map(
@@ -36,27 +36,14 @@ const Product = ({ products }) => {
               <div className="product-price">
                 {discount ? (
                   <>
-                    <h3
-                      className="price-discount"
-                      aria-label={price}
-                      tabIndex="0"
-                    >
-                      {formatPrice.format(price)}
-                    </h3>
-                    <h3 aria-label={discount} tabIndex="0">
-                      {formatPrice.format(discount)}
-                    </h3>
+                    <PriceDiscount price={price} formatPrice={formatPrice} />
+                    <Price price={discount} formatPrice={formatPrice} />
                   </>
                 ) : (
-                  <h3 aria-label={price} tabIndex="0">
-                    {formatPrice.format(price)}
-                  </h3>
+                  <Price price={price} formatPrice={formatPrice} />
                 )}
               </div>
-              <p className="description" aria-label={description} tabIndex="0">
-                {" "}
-                {description}
-              </p>
+              <Description description={description} />
               <div className="features" tabIndex="0">
                 {features?.map((feature) => (
                   <p
