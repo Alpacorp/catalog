@@ -40,12 +40,6 @@
   margin: 0 15px 0 0;
 }
 
-.product-info .description {
-  margin-block: 10px;
-  margin-inline-end: 5px;
-  font-size: 13px;
-}
-
 .product-info .features,
 .tags {
   display: flex;
