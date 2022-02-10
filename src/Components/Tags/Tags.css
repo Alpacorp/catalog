@@ -1,0 +1,10 @@
+.product-info .tags small {
+  background-color: blueviolet;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin-inline-end: 5px;
+  margin-block-start: 3px;
+  font-size: 10px;
+  text-transform: capitalize;
+}

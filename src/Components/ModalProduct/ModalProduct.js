@@ -1,10 +1,10 @@
-import { memo, useCallback } from "react";
-import gorroImage from "../../Data/assets/gorro.png";
+import React, { memo, useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import "./ModalProduct.css";
 
-const ModalProduct = ({ modalState, setModalState }) => {
+const ModalProduct = ({ modalState, setModalState, name, children }) => {
   console.log("cargue de modal de producto");
+  const [count, setCount] = useState(0);
   const hide = useCallback(() => {
     setModalState(false);
   }, [setModalState]);
@@ -14,7 +14,7 @@ const ModalProduct = ({ modalState, setModalState }) => {
         <section className="modal">
           <div className="container">
             <div className="header">
-              <header>Nombre producto</header>
+              <header>{name}</header>
             </div>
             <div>
               <div>
@@ -32,16 +32,10 @@ const ModalProduct = ({ modalState, setModalState }) => {
                 </button>
               </div>
             </div>
-            <h3>Precio Producto w</h3>
-            <figure>
-              <img src={gorroImage} alt={gorroImage} />
-            </figure>
-            <div>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Molestiae totam ipsum amet, quia quidem maxime facilis tempora
-              iste debitis et mollitia dicta reprehenderit dolore neque nihil,
-              id voluptatum est laboriosam.
-            </div>
+            {children}
+            <button onClick={() => setCount(count + 1)}>
+              count modal {count}
+            </button>
           </div>
         </section>
       )}

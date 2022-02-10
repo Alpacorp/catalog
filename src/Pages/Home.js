@@ -3,7 +3,7 @@ import Footer from "../Components/Footer/Footer";
 import Hero from "../Components/Hero/Hero";
 import PageSubtitle from "../Components/PageSubtitle/PageSubtitle";
 import PageTitle from "../Components/PageTitle/PageTitle";
-import Product from "../Components/Product/Product";
+import ProductList from "../Components/Product/ProductList";
 import Data from "../Data/categories.json";
 import Products from "../Data/products.json";
 import "./Home.css";
@@ -23,7 +23,7 @@ const Home = () => {
             <Categories categories={Data} />
           </div>
           <div className="products">
-            <Product products={Products} />
+            <ProductList products={Products} />
           </div>
         </main>
         <Footer />
