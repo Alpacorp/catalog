@@ -7,7 +7,11 @@
   max-width: 250px;
   max-height: 180px;
   border-radius: 5px;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.product-image-modal img {
+  width: 70%;
 }
 
 @media screen and (max-width: 750px) {

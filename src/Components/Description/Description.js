@@ -1,9 +1,9 @@
 import "./Description.css";
 
-const Description = ({ description }) => {
+const Description = ({ description, styleDesc }) => {
   return (
     <>
-      <p className="description" aria-label={description} tabIndex="0">
+      <p className={styleDesc} aria-label={description} tabIndex="0">
         {" "}
         {description}
       </p>
