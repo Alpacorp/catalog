@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import "./ModalProduct.css";
 
 const ModalProduct = ({ modalState, setModalState, name, children }) => {
-  console.log("cargue de modal de producto", name);
   const hide = useCallback(() => {
     setModalState(false);
   }, [setModalState]);
@@ -40,6 +39,8 @@ const ModalProduct = ({ modalState, setModalState, name, children }) => {
 ModalProduct.propTypes = {
   modalState: PropTypes.bool.isRequired,
   setModalState: PropTypes.func.isRequired,
+  name: PropTypes.string.isRequired,
+  children: PropTypes.array.isRequired,
 };
 
 export default memo(ModalProduct);

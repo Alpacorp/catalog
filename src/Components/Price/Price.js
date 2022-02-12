@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 const Price = ({ price, formatPrice }) => {
   return (
     <div>
@@ -6,6 +8,11 @@ const Price = ({ price, formatPrice }) => {
       </h3>
     </div>
   );
+};
+
+Price.propTypes = {
+  price: PropTypes.string.isRequired,
+  formatPrice: PropTypes.object.isRequired,
 };
 
 export default Price;

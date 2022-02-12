@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from "react";
+import PropTypes from "prop-types";
 import { formatPrice } from "../../utils/formatPrice.";
 import ModalProduct from "../ModalProduct/ModalProduct";
 import ProductImage from "../ProductImage/ProductImage";
@@ -20,7 +21,6 @@ const Product = ({
   discount,
   promo,
 }) => {
-  console.log("cargue de producto", name);
   const [modalState, setModalState] = useState(false);
   const showHide = useCallback(
     () => setModalState((modalState) => !modalState),
@@ -75,8 +75,16 @@ const Product = ({
   );
 };
 
-// Product.propTypes = {
-//   products: PropTypes.object.isRequired,
-// };
+Product.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  price: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  features: PropTypes.array,
+  tags: PropTypes.array,
+  image: PropTypes.any.isRequired,
+  discount: PropTypes.string,
+  promo: PropTypes.bool,
+};
 
 export default Product;

@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./Description.css";
 
 const Description = ({ description, styleDesc }) => {
@@ -9,6 +10,11 @@ const Description = ({ description, styleDesc }) => {
       </p>
     </>
   );
+};
+
+Description.propTypes = {
+  description: PropTypes.string.isRequired,
+  styleDesc: PropTypes.string.isRequired,
 };
 
 export default Description;

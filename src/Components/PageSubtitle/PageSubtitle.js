@@ -2,7 +2,6 @@ import "./PageSubtitle.css";
 import PropTypes from "prop-types";
 
 const PageSubtitle = ({ titleText, styleType }) => {
-  console.log("cargue de Subtitle");
   return (
     <>
       <section className={styleType}>
