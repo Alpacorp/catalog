@@ -1,7 +1,7 @@
+import PropTypes from "prop-types";
 import Product from "./Product";
 
 const ProductList = ({ products }) => {
-  console.log("carga listado productos");
   return (
     <div>
       {products.data.map((product) => (
@@ -9,6 +9,10 @@ const ProductList = ({ products }) => {
       ))}
     </div>
   );
+};
+
+ProductList.propTypes = {
+  products: PropTypes.object.isRequired,
 };
 
 export default ProductList;

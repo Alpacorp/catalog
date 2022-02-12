@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Price from "../Price/Price";
 import PriceDiscount from "../PriceDiscount/PriceDiscount";
 import "./ProductPrice.css";
@@ -15,6 +16,12 @@ const ProductPrice = ({ discount, price, formatPrice }) => {
       )}
     </div>
   );
+};
+
+ProductPrice.propTypes = {
+  discount: PropTypes.string,
+  price: PropTypes.string.isRequired,
+  formatPrice: PropTypes.object.isRequired,
 };
 
 export default ProductPrice;

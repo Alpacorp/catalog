@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./Features.css";
 
 const Features = ({ features, id }) => {
@@ -10,6 +11,11 @@ const Features = ({ features, id }) => {
       ))}
     </div>
   );
+};
+
+Features.propTypes = {
+  features: PropTypes.array.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Features;

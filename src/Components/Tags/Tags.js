@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./Tags.css";
 
 const Tags = ({ tags, id }) => {
@@ -10,6 +11,11 @@ const Tags = ({ tags, id }) => {
       ))}
     </div>
   );
+};
+
+Tags.propTypes = {
+  tags: PropTypes.array.isRequired,
+  id: PropTypes.number.isRequired,
 };
 
 export default Tags;

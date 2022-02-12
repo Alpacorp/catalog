@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import "./ProductImage.css";
 
 const ProductImage = ({ id, image, name, styleImg }) => {
@@ -10,6 +11,13 @@ const ProductImage = ({ id, image, name, styleImg }) => {
       </div>
     </>
   );
+};
+
+ProductImage.propTypes = {
+  id: PropTypes.number.isRequired,
+  image: PropTypes.any.isRequired,
+  name: PropTypes.string.isRequired,
+  styleImg: PropTypes.string.isRequired,
 };
 
 export default ProductImage;

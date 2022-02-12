@@ -2,7 +2,6 @@ import "./PageTitle.css";
 import PropTypes from "prop-types";
 
 const PageTitle = ({ titleText, styleType }) => {
-  console.log("cargue de title");
   return (
     <>
       <section className={styleType}>
