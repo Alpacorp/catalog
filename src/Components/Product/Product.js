@@ -70,6 +70,9 @@ const Product = ({
           description={description}
           styleDesc={"description-modal"}
         />
+        <div className="add-car">
+          <button>Agregar al Carrito</button>
+        </div>
       </ModalProduct>
     </>
   );

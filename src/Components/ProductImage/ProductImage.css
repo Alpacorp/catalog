@@ -11,7 +11,7 @@
 }
 
 .product-image-modal img {
-  width: 70%;
+  width: 50%;
 }
 
 @media screen and (max-width: 750px) {

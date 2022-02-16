@@ -16,13 +16,12 @@
 
 .modal .container {
   width: 500px;
-  height: 500px;
+  height: auto;
   margin: auto;
   background-color: #fff;
   box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.05);
   transition: all 500ms ease;
   position: relative;
-  overflow: auto;
 }
 
 .container .header {
@@ -51,8 +50,11 @@
 }
 
 .close-icon svg {
-  /* width: 100%; */
   height: 100%;
+}
+
+.container-info {
+  padding: 10px;
 }
 
 @media screen and (max-width: 500px) {

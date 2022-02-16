@@ -51,6 +51,10 @@
   border-radius: 5px;
 }
 
+.add-car {
+  margin: 20px 0;
+}
+
 @media screen and (max-width: 750px) {
   .product-info h2 {
     font-size: 15px;
