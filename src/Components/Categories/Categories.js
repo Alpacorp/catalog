@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import "./Categories.css";
 import gorroImage from "../../Data/assets/gorro.png";
+import { Link } from "react-router-dom";
 
 const Categories = ({ categories }) => {
   console.log("cargue de categories");
@@ -17,8 +18,10 @@ const Categories = ({ categories }) => {
                   console.log("click en lista");
                 }}
               >
-                <img src={gorroImage} alt="prueba" />
-                <a href="/">{category}</a>
+                <Link to="/">
+                  <img src={gorroImage} alt="prueba" />
+                  {category}
+                </Link>
               </li>
             ))}
           </ul>
