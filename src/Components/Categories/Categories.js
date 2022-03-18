@@ -1,13 +1,10 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import "./Categories.css";
-// import gorroImage from "../../Data/assets/gorro.png";
 import { Link } from "react-router-dom";
 import ProductList from "../Product/ProductList";
 
 const Categories = ({ categories, products }) => {
-  console.log("products", products);
-
   const [productList, setProductList] = useState(products.data);
 
   const handleFilterCategory = (cat) => {
@@ -21,8 +18,6 @@ const Categories = ({ categories, products }) => {
       setProductList(catFilter);
     }
   };
-
-  console.log("productList", productList);
 
   return (
     <>
@@ -38,7 +33,6 @@ const Categories = ({ categories, products }) => {
                 }}
               >
                 <Link to="/">
-                  {/* <img src={gorroImage} alt="prueba" /> */}
                   <img src={image} alt={`ícono de ${category}`} />
                   {category}
                 </Link>

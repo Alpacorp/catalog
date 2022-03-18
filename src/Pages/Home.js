@@ -3,7 +3,6 @@ import Footer from "../Components/Footer/Footer";
 import Hero from "../Components/Hero/Hero";
 import PageSubtitle from "../Components/PageSubtitle/PageSubtitle";
 import PageTitle from "../Components/PageTitle/PageTitle";
-import ProductList from "../Components/Product/ProductList";
 import Data from "../Data/categories.json";
 import Products from "../Data/products.json";
 import "./Home.css";
@@ -22,9 +21,7 @@ const Home = () => {
             <PageSubtitle titleText={"Catálogo"} styleType={"title-small"} />
             <Categories categories={Data} products={Products} />
           </div>
-          <div className="products">
-            {/* <ProductList products={Products} /> */}
-          </div>
+          <div className="products"></div>
         </main>
         <Footer />
       </div>

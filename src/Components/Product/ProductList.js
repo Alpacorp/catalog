@@ -2,7 +2,6 @@ import PropTypes from "prop-types";
 import Product from "./Product";
 
 const ProductList = ({ products }) => {
-  console.log("productList inner", products);
   return (
     <div>
       {products.map((product) => (
