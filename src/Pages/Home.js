@@ -20,10 +20,10 @@ const Home = () => {
               styleType={"title-big"}
             />
             <PageSubtitle titleText={"Catálogo"} styleType={"title-small"} />
-            <Categories categories={Data} />
+            <Categories categories={Data} products={Products} />
           </div>
           <div className="products">
-            <ProductList products={Products} />
+            {/* <ProductList products={Products} /> */}
           </div>
         </main>
         <Footer />

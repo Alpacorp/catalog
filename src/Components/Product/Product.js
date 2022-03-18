@@ -42,7 +42,7 @@ const Product = ({
             price={price}
             formatPrice={formatPrice}
           />
-          <Description description={description} styleDesc={"description"} />
+          {/* <Description description={description} styleDesc={"description"} /> */}
           <Features features={features} id={id} />
           <Tags tags={tags} id={id} />
           <div className="product-button">

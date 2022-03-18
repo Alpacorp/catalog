@@ -3,37 +3,37 @@
     {
       "id": 0,
       "category": "Todo",
-      "image":"https://www.flaticon.com/free-icons/all"
+      "image":"https://cdn-icons-png.flaticon.com/512/5559/5559310.png"
     },
     {
       "id": 1,
       "category": "Patines",
-      "image":"https://www.flaticon.es/iconos-gratis/patines"
+      "image":"https://cdn-icons-png.flaticon.com/512/492/492161.png"
     },
     {
       "id": 2,
       "category": "Balacas",
-      "image":"https://www.flaticon.es/iconos-gratis/cetro"
+      "image":"https://cdn-icons-png.flaticon.com/512/1076/1076305.png"
     },
     {
       "id": 3,
       "category": "Gorros",
-      "image":"https://www.flaticon.es/iconos-gratis/gorro-de-navidad"
+      "image":"https://cdn-icons-png.flaticon.com/512/3351/3351990.png"
     },
     {
       "id": 4,
       "category": "Bufandas",
-      "image": "https://www.flaticon.es/iconos-gratis/silenciador"
+      "image": "https://cdn-icons-png.flaticon.com/512/621/621695.png"
     },
     {
       "id": 5,
       "category": "Promociones",
-      "image": "https://www.flaticon.es/iconos-gratis/silenciador"
+      "image": "https://cdn-icons-png.flaticon.com/512/3486/3486989.png"
     },
     {
       "id": 6,
       "category": "Descuentos",
-      "image": "https://www.flaticon.es/iconos-gratis/silenciador"
+      "image": "https://cdn-icons-png.flaticon.com/512/1017/1017425.png"
     }
   ]
 }

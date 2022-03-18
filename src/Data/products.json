@@ -84,6 +84,26 @@
         "jóvenes"
       ],
       "image": "https://i2.wp.com/todocrochet.store/wp-content/uploads/2019/06/diadema-gris-crochet.jpg?resize=300%2C300&ssl=1"
+    },
+    {
+      "id": 5,
+      "category": 4,
+      "name": "Bufanda",
+      "price": "12350",
+      "discount": "",
+      "promo": true,
+      "description": "",
+      "features": [
+        "suaves",
+        "antialergénicos",
+        "coloridos"
+      ],
+      "tags": [
+        "suaves",
+        "balacas",
+        "tejidos"
+      ],
+      "image": "https://i.ytimg.com/an/sWAcz7pPW3s/e0269e4b-ed03-45be-80a5-5968795a4668_mq.jpg?v=59491e2c"
     }
   ]
 }
