@@ -29,15 +29,17 @@ const Product = ({
   );
 
   const handleAddToCart = (id, name, price, description, image, discount) => {
-    const product = {
-      id,
-      name,
-      price,
-      description,
-      image,
-      discount,
-    };
-    localStorage.setItem("product", JSON.stringify(product));
+    const productData = [{ id, name, price, description, image, discount }];
+    let recoveredData = localStorage.getItem("product");
+
+    if (recoveredData === null) {
+      localStorage.setItem("product", JSON.stringify(productData));
+    } else {
+      let data = JSON.parse(recoveredData);
+      let newData = { id, name, price, description, image, discount };
+      data.push(newData);
+      localStorage.setItem("product", JSON.stringify(data));
+    }
   };
 
   return (
@@ -56,7 +58,6 @@ const Product = ({
             price={price}
             formatPrice={formatPrice}
           />
-          {/* <Description description={description} styleDesc={"description"} /> */}
           <Features features={features} id={id} />
           <Tags tags={tags} id={id} />
           <div className="product-button">
