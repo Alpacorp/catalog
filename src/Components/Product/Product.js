@@ -21,11 +21,25 @@ const Product = ({
   discount,
   promo,
 }) => {
+  console.log("cargue de producto");
   const [modalState, setModalState] = useState(false);
   const showHide = useCallback(
     () => setModalState((modalState) => !modalState),
     []
   );
+
+  const handleAddToCart = (id, name, price, description, image, discount) => {
+    const product = {
+      id,
+      name,
+      price,
+      description,
+      image,
+      discount,
+    };
+    localStorage.setItem("product", JSON.stringify(product));
+  };
+
   return (
     <>
       <section className="product" key={id + "product"} tabIndex="0">
@@ -71,7 +85,13 @@ const Product = ({
           styleDesc={"description-modal"}
         />
         <div className="add-car">
-          <button>Agregar al Carrito</button>
+          <button
+            onClick={() =>
+              handleAddToCart(id, name, price, description, image, discount)
+            }
+          >
+            Agregar al Carrito
+          </button>
         </div>
       </ModalProduct>
     </>

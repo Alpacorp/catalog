@@ -1,7 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import "./Categories.css";
-import { Link } from "react-router-dom";
 import ProductList from "../Product/ProductList";
 
 const Categories = ({ categories, products }) => {
@@ -32,20 +31,21 @@ const Categories = ({ categories, products }) => {
                   console.log("click en lista");
                 }}
               >
-                <Link to="/">
-                  <img src={image} alt={`ícono de ${category}`} />
+                <button
+                  className="button-cat"
+                  key={id}
+                  onClick={() => handleFilterCategory(id)}
+                >
+                  <img
+                    className="icon-image"
+                    src={image}
+                    alt={`ícono de ${category}`}
+                  />
                   {category}
-                </Link>
+                </button>
               </li>
             ))}
           </ul>
-          <div>
-            {categories.data.map(({ id, category }) => (
-              <button key={id} onClick={() => handleFilterCategory(id)}>
-                {category}
-              </button>
-            ))}
-          </div>
         </nav>
       </section>
       <section>

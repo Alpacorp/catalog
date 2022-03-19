@@ -21,7 +21,7 @@ const Home = () => {
             <PageSubtitle titleText={"Catálogo"} styleType={"title-small"} />
             <Categories categories={Data} products={Products} />
           </div>
-          <div className="products"></div>
+          {/* <div className="products"></div> */}
         </main>
         <Footer />
       </div>
