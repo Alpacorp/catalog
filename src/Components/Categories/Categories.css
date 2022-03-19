@@ -26,6 +26,24 @@
   color: #000;
 }
 
+/*  */
+
+.categories .button-cat {
+  /* max-width: 200px; */
+  /* width: 100%; */
+}
+
+.categories .button-cat img {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+
+.categories .icon-image {
+  width: 30px;
+}
+
 @media screen and (max-width: 690px) {
 }
 
