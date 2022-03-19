@@ -14,10 +14,7 @@ const Home = () => {
         <Hero />
         <main>
           <div className="title-store">
-            <PageTitle
-              titleText={"Creaciones la Oveja Calva"}
-              styleType={"title-big"}
-            />
+            <PageTitle titleText={"Creaciones Firu"} styleType={"title-big"} />
             <PageSubtitle titleText={"Catálogo"} styleType={"title-small"} />
             <Categories categories={Data} products={Products} />
           </div>
