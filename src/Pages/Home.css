@@ -5,13 +5,14 @@
   margin: auto;
 }
 
-.title-store, .products {
+.title-store,
+.products {
   margin: 40px;
 }
 
-
-@media screen and (max-width: 380px) {
-  .title-store, .products {
-    margin: 20px;
+@media screen and (max-width: 550px) {
+  .title-store,
+  .products {
+    margin: 5px;
   }
 }
