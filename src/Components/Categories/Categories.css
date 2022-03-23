@@ -29,8 +29,7 @@
 /*  */
 
 .categories .button-cat {
-  /* max-width: 200px; */
-  /* width: 100%; */
+  cursor: pointer;
 }
 
 .categories .button-cat img {
