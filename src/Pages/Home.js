@@ -1,3 +1,4 @@
+import Cart from "../Components/Cart/Cart";
 import Categories from "../Components/Categories/Categories";
 import Footer from "../Components/Footer/Footer";
 import Hero from "../Components/Hero/Hero";
@@ -20,6 +21,7 @@ const Home = () => {
           </div>
           {/* <div className="products"></div> */}
         </main>
+        <Cart />
         <Footer />
       </div>
     </>
