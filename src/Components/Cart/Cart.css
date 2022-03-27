@@ -1,0 +1,14 @@
+.cart {
+  background-color: #7fffd4;
+}
+
+.cart .cart-info {
+  border: 1px solid gray;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cart .product-image-cart figure img {
+  width: 50px;
+}
