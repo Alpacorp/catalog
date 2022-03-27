@@ -1,4 +1,9 @@
 import { useState, useEffect } from "react";
+import { formatPrice } from "../../utils/formatPrice.";
+import ProductImage from "../ProductImage/ProductImage";
+import ProductInfoHeader from "../ProductInfoHeader/ProductInfoHeader";
+import ProductPrice from "../ProductPrice/ProductPrice";
+import "./Cart.css";
 
 const Cart = () => {
   const [itemsCart, setItemsCart] = useState([]);
@@ -12,15 +17,30 @@ const Cart = () => {
     getItemsCart();
   }, []);
   return (
-    <section>
-      <div>
-        {itemsCart?.map((item) => (
-          <div key={`${item?.id} + ${new Date().getMilliseconds()}`}>
-            <p>{item?.name}</p>
-            <p>{item?.price}</p>
+    <section className="cart">
+      {itemsCart?.map((item) => (
+        <div
+          className="cart-info"
+          key={`${item?.id} + ${new Date().getMilliseconds()}`}
+        >
+          <div>
+            <ProductImage
+              id={item.id}
+              image={item.image}
+              name={item.name}
+              styleImg={"product-image-cart"}
+            />
           </div>
-        ))}
-      </div>
+          <div>
+            <ProductInfoHeader promo={false} name={item.name} />
+            <ProductPrice
+              discount={item.discount}
+              price={item.price}
+              formatPrice={formatPrice}
+            />
+          </div>
+        </div>
+      ))}
     </section>
   );
 };
