@@ -29,10 +29,10 @@ const Product = ({
   );
 
   const productList = "product-list";
+  let recoveredData = localStorage.getItem(productList);
 
   const handleAddToCart = (id, name, price, description, image, discount) => {
     const productData = [{ id, name, price, description, image, discount }];
-    let recoveredData = localStorage.getItem(productList);
 
     if (recoveredData === null) {
       localStorage.setItem(productList, JSON.stringify(productData));
@@ -89,6 +89,7 @@ const Product = ({
         />
         <div className="add-car">
           <button
+            disabled
             onClick={() =>
               handleAddToCart(id, name, price, description, image, discount)
             }
