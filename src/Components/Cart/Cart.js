@@ -3,6 +3,7 @@ import { formatPrice } from "../../utils/formatPrice.";
 import ProductImage from "../ProductImage/ProductImage";
 import ProductInfoHeader from "../ProductInfoHeader/ProductInfoHeader";
 import ProductPrice from "../ProductPrice/ProductPrice";
+import { Delete } from "../assets/index";
 import "./Cart.css";
 
 const Cart = () => {
@@ -12,7 +13,13 @@ const Cart = () => {
     setItemsCart(products);
   };
 
-  console.log(itemsCart);
+  const deleteProduct = (id) => {
+    const newArrayCartProd = itemsCart.filter((product) => product.id !== id);
+    setItemsCart(newArrayCartProd);
+    localStorage.setItem("product-list", JSON.stringify(newArrayCartProd));
+  };
+
+  console.log("itemsCart", itemsCart);
   useEffect(() => {
     getItemsCart();
   }, []);
@@ -23,7 +30,7 @@ const Cart = () => {
           className="cart-info"
           key={`${item?.id} + ${new Date().getMilliseconds()}`}
         >
-          <div>
+          <div className="product-image">
             <ProductImage
               id={item.id}
               image={item.image}
@@ -31,12 +38,22 @@ const Cart = () => {
               styleImg={"product-image-cart"}
             />
           </div>
-          <div>
+          <div className="product-name">
             <ProductInfoHeader promo={false} name={item.name} />
+          </div>
+          <div className="product-price">
             <ProductPrice
               discount={item.discount}
               price={item.price}
               formatPrice={formatPrice}
+            />
+          </div>
+          <div className="product-delete">
+            <img
+              src={Delete}
+              alt="eliminar producto"
+              title="Eliminar producto"
+              onClick={() => deleteProduct(item.id)}
             />
           </div>
         </div>
