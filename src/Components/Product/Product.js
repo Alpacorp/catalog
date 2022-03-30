@@ -48,7 +48,7 @@ const Product = ({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const checkProductCart = (id) => {
     let data = JSON.parse(recoveredData);
-    const filterData = data.some((product) => product.id === id);
+    const filterData = data?.some((product) => product.id === id);
     setExist(filterData);
     return filterData;
   };
