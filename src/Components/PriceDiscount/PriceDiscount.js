@@ -12,7 +12,7 @@ const PriceDiscount = ({ price, formatPrice }) => {
 };
 
 PriceDiscount.propTypes = {
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   formatPrice: PropTypes.object.isRequired,
 };
 

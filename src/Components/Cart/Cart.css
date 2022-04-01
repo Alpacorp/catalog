@@ -30,3 +30,8 @@
   cursor: pointer;
   width: 20px;
 }
+
+.cart .cart-sum {
+  text-align: center;
+  font-weight: bold;
+}

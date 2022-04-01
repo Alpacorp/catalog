@@ -13,16 +13,24 @@ const Cart = () => {
     setItemsCart(products);
   };
 
+  const getSumAllCart = () => {
+    const sum = itemsCart
+      .map((product) => JSON.parse(product.price))
+      .reduce((previosValue, currentValue) => previosValue + currentValue, 0);
+
+    return sum;
+  };
+
   const deleteProduct = (id) => {
     const newArrayCartProd = itemsCart.filter((product) => product.id !== id);
     setItemsCart(newArrayCartProd);
     localStorage.setItem("product-list", JSON.stringify(newArrayCartProd));
   };
 
-  console.log("itemsCart", itemsCart);
   useEffect(() => {
     getItemsCart();
   }, []);
+
   return (
     <section className="cart">
       {itemsCart?.map((item) => (
@@ -58,6 +66,11 @@ const Cart = () => {
           </div>
         </div>
       ))}
+      <div className="cart-sum">
+        {itemsCart?.length
+          ? `Total: ${formatPrice.format(getSumAllCart())}`
+          : ""}
+      </div>
     </section>
   );
 };

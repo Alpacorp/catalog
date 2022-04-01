@@ -119,12 +119,12 @@ const Product = ({
 Product.propTypes = {
   id: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
-  price: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
   features: PropTypes.array,
   tags: PropTypes.array,
   image: PropTypes.any.isRequired,
-  discount: PropTypes.string,
+  discount: PropTypes.number,
   promo: PropTypes.bool,
 };
 
