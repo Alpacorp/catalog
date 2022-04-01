@@ -19,8 +19,8 @@ const ProductPrice = ({ discount, price, formatPrice }) => {
 };
 
 ProductPrice.propTypes = {
-  discount: PropTypes.string,
-  price: PropTypes.string.isRequired,
+  discount: PropTypes.number,
+  price: PropTypes.number.isRequired,
   formatPrice: PropTypes.object.isRequired,
 };
 
