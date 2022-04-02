@@ -67,9 +67,14 @@ const Cart = () => {
         </div>
       ))}
       <div className="cart-sum">
-        {itemsCart?.length
-          ? `Total: ${formatPrice.format(getSumAllCart())}`
-          : ""}
+        {itemsCart?.length ? (
+          <div className="cart-sum-data">
+            <p>{`Tu pedido: ( ${itemsCart.length} )`}</p>
+            <p>{`Total: ${formatPrice.format(getSumAllCart())}`}</p>
+          </div>
+        ) : (
+          ""
+        )}
       </div>
     </section>
   );

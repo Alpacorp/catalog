@@ -32,6 +32,17 @@
 }
 
 .cart .cart-sum {
-  text-align: center;
+  text-align: right;
   font-weight: bold;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cart-sum .cart-sum-data {
+  display: flex;
+}
+
+.cart-sum-data p {
+  margin: 0 20px;
 }
