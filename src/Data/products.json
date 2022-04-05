@@ -1,109 +1,177 @@
 {
   "data": [
     {
-      "id": 1,
+      "id": 6,
       "category": 1,
-      "name": "Patines",
-      "price": 30000,
+      "name": "Patines Blancos",
+      "price": 40000,
       "discount": 0,
       "promo": false,
-      "description": "Hermosos patines en lana de oveja virgen confeccionados con tradición, amor y dedicación para  que hagas parte y uses nuestra prenda de calidad  y comodidad garantizada.",
+      "description": "Hermosos patines para niña blancos con cinta roja, puedes escoger solo los patines o en conjunto con la balaca",
       "features": [
+        "niña",
         "suaves",
-        "antialergénicos",
-        "coloridos"
+        "antialergénicos"
       ],
       "tags": [
-        "suaves",
-        "patines",
-        "tejidos",
-        "bebés"
+        "con balaca",
+        "tejidos a mano",
+        "blanco"
       ],
-      "image": "https://i.ytimg.com/vi/6wp0Qr6bjog/hqdefault.jpg"
+      "image": "https://alpacorp.net/creaciones_firu/CF-02.jpeg"
     },
     {
-      "id": 2,
-      "category": 3,
-      "name": "Gorros de lana",
-      "price": 20000,
-      "discount": 15000,
-      "promo": true,
-      "description": "Tupidos y coloridos gorros de lana para que te protejas del frío con el mejor estilo y calidad que te podemos ofrecer, de nuestras manos a tu puerta.",
-      "features": [
-        "Tres hillos",
-        "antialergénicos",
-        "cálidos",
-        "personalizados",
-        "muy suaves"
-      ],
-      "tags": [
-        "gorros",
-        "lana",
-        "tejidos",
-        "adultos"
-      ],
-      "image": "https://m.media-amazon.com/images/I/71f2qZRCAZL._AC_UX385_.jpg"
-    },
-    {
-      "id": 3,
-      "category": 4,
-      "name": "Bufanda",
-      "price": 10000,
-      "discount": 9000,
-      "promo": true,
-      "description": "",
-      "features": [
-        "suaves",
-        "antialergénicos",
-        "coloridos"
-      ],
-      "tags": [
-        "suaves",
-        "balacas",
-        "tejidos"
-      ],
-      "image": "https://i.ytimg.com/an/sWAcz7pPW3s/e0269e4b-ed03-45be-80a5-5968795a4668_mq.jpg?v=59491e2c"
-    },
-    {
-      "id": 4,
+      "id": 7,
       "category": 2,
-      "name": "Balacas",
-      "price": 12500,
+      "name": "Patines Perlados",
+      "price": 40000,
       "discount": 0,
       "promo": false,
-      "description": "Personalizadas tanto en color, tamaño y forma para que luzcas el mejor estilo y calidad.",
+      "description": "Hermosos patines con un diseño de color blanco perlado.",
       "features": [
-        "largas",
-        "cortas",
-        "medianas"
+        "niña",
+        "suaves",
+        "antialergénicos"
       ],
       "tags": [
-        "suaves",
-        "balacas",
-        "tejidos",
-        "jóvenes"
+        "tejidos a mano",
+        "blanco"
       ],
-      "image": "https://i2.wp.com/todocrochet.store/wp-content/uploads/2019/06/diadema-gris-crochet.jpg?resize=300%2C300&ssl=1"
+      "image": "https://alpacorp.net/creaciones_firu/CF-12.jpeg"
     },
     {
-      "id": 5,
-      "category": 4,
-      "name": "Bufanda",
-      "price": 12350,
-      "discount": 8562,
-      "promo": true,
-      "description": "",
+      "id": 8,
+      "category": 2,
+      "name": "Patines Perlados",
+      "price": 40000,
+      "discount": 0,
+      "promo": false,
+      "description": "Hermosos patines con un diseño de colores perlado y cinta transparente decorativa.",
       "features": [
+        "mixto",
         "suaves",
-        "antialergénicos",
-        "coloridos"
+        "antialergénicos"
       ],
       "tags": [
-        "suaves",
-        "balacas",
-        "tejidos"
+        "tejidos a mano",
+        "azul"
       ],
-      "image": "https://i.ytimg.com/an/sWAcz7pPW3s/e0269e4b-ed03-45be-80a5-5968795a4668_mq.jpg?v=59491e2c"
+      "image": "https://alpacorp.net/creaciones_firu/CF-04.jpeg"
+    },
+    {
+      "id": 9,
+      "category": 2,
+      "name": "Patines Perlados",
+      "price": 40000,
+      "discount": 0,
+      "promo": false,
+      "description": "Hermosos patines con un diseño rosado de colores perlado y rosas azules en la cinta sujetadora.",
+      "features": [
+        "niña",
+        "suaves",
+        "antialergénicos"
+      ],
+      "tags": [
+        "tejidos a mano",
+        "rosado"
+      ],
+      "image": "https://alpacorp.net/creaciones_firu/CF-13.jpeg"
+    },
+    {
+      "id": 10,
+      "category": 2,
+      "name": "Patines Perlados",
+      "price": 40000,
+      "discount": 0,
+      "promo": false,
+      "description": "Hermosos patines con un diseño de colores claros y rosas decorativas en la cinta sujetadora.",
+      "features": [
+        "niña",
+        "suaves",
+        "antialergénicos"
+      ],
+      "tags": [
+        "tejidos a mano",
+        "blanco"
+      ],
+      "image": "https://alpacorp.net/creaciones_firu/CF-22.jpeg"
+    },
+    {
+      "id": 11,
+      "category": 1,
+      "name": "Patines Rojos",
+      "price": 40000,
+      "discount": 0,
+      "promo": false,
+      "description": "Hermosos patines rojos con cinta en forma de moño",
+      "features": [
+        "niña",
+        "suaves",
+        "antialergénicos"
+      ],
+      "tags": [
+        "tejidos a mano",
+        "rojo"
+      ],
+      "image": "https://alpacorp.net/creaciones_firu/CF-19.jpeg"
+    },
+    {
+      "id": 12,
+      "category": 1,
+      "name": "Patines Blancos",
+      "price": 40000,
+      "discount": 0,
+      "promo": false,
+      "description": "Hermosos patines blancos con diseño de rosa incluida en la parte frontal.",
+      "features": [
+        "niña",
+        "suaves",
+        "antialergénicos"
+      ],
+      "tags": [
+        "tejidos a mano",
+        "blanco"
+      ],
+      "image": "https://alpacorp.net/creaciones_firu/CF-30.jpeg"
+    },
+    {
+      "id": 13,
+      "category": 1,
+      "name": "Patines Aguamarina",
+      "price": 40000,
+      "discount": 0,
+      "promo": false,
+      "description": "Hermosos patines en conjunto con balaca tejida y decorada.",
+      "features": [
+        "niña",
+        "suaves",
+        "antialergénicos"
+      ],
+      "tags": [
+        "tejidos a mano",
+        "aguamarina"
+      ],
+      "image": "https://alpacorp.net/creaciones_firu/CF-35.jpeg"
+    },
+    {
+      "id": 14,
+      "category": 3,
+      "name": "Gorros Tejidos",
+      "price": 40000,
+      "discount": 0,
+      "promo": false,
+      "description": "Tejidos a mano con hermosas decoraciones, detalles, colores y cintas.",
+      "features": [
+        "niña",
+        "suaves",
+        "antialergénicos",
+        "a la medida"
+      ],
+      "tags": [
+        "tejidos a mano",
+        "diversos colores"
+      ],
+      "image": "https://alpacorp.net/creaciones_firu/CF-36.jpeg"
     }
   ]
 }

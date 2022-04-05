@@ -2,4 +2,14 @@
   text-align: center;
   padding-block: 20px;
   background-color: salmon;
+  font-size: 10px;
+}
+
+.footer-info a {
+  color: rgb(9, 47, 65);
+  text-decoration: none;
+}
+
+.footer-info a:hover {
+  color: #000;
 }

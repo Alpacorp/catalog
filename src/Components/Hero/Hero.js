@@ -21,7 +21,7 @@ const Hero = () => {
           <div>
             <figure>
               <img
-                src={Profile}
+                src="https://cdn-icons-png.flaticon.com/512/1648/1648338.png"
                 alt={"Profile" + Profile}
                 aria-label={"Profile" + Profile}
               />
