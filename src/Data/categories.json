@@ -12,18 +12,13 @@
     },
     {
       "id": 2,
-      "category": "Balacas",
-      "image":"https://cdn-icons-png.flaticon.com/512/1076/1076305.png"
+      "category": "Perlados",
+      "image":"https://cdn-icons-png.flaticon.com/512/1907/1907874.png"
     },
     {
       "id": 3,
       "category": "Gorros",
       "image":"https://cdn-icons-png.flaticon.com/512/3351/3351990.png"
-    },
-    {
-      "id": 4,
-      "category": "Bufandas",
-      "image": "https://cdn-icons-png.flaticon.com/512/621/621695.png"
     }
   ]
 }
