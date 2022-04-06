@@ -1,0 +1,20 @@
+.counter {
+  margin: 10px 0;
+}
+
+.counter .counter-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.counter h6 {
+  margin: 0;
+}
+
+
+.counter-action .counter-button {
+  cursor: pointer;
+}
