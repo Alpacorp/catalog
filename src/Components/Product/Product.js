@@ -9,6 +9,7 @@ import Features from "../Features/Features";
 import Tags from "../Tags/Tags";
 import ProductPrice from "../ProductPrice/ProductPrice";
 import "./Product.css";
+import Counter from "../Counter/Counter";
 
 const Product = ({
   id,
@@ -100,6 +101,7 @@ const Product = ({
           description={description}
           styleDesc={"description-modal"}
         />
+        <Counter />
         <div className="add-car">
           <button
             disabled={exist}
