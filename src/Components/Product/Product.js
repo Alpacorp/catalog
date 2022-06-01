@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import { formatPrice } from "../../utils/formatPrice.";
 import ModalProduct from "../ModalProduct/ModalProduct";
@@ -10,6 +10,8 @@ import Tags from "../Tags/Tags";
 import ProductPrice from "../ProductPrice/ProductPrice";
 import "./Product.css";
 import Counter from "../Counter/Counter";
+import { useDispatch } from "react-redux";
+import { addToCartSuccess } from "../../actions/actions";
 
 const Product = ({
   id,
@@ -30,33 +32,11 @@ const Product = ({
     []
   );
 
-  const productList = "product-list";
-  let recoveredData = localStorage.getItem(productList);
-  let data = JSON.parse(recoveredData);
+  const dispatch = useDispatch();
 
-  const handleAddToCart = (id, name, price, description, image, discount) => {
-    const productData = [{ id, name, price, description, image, discount }];
-
-    if (recoveredData === null) {
-      localStorage.setItem(productList, JSON.stringify(productData));
-    } else {
-      let newData = { id, name, price, description, image, discount };
-      data.push(newData);
-      localStorage.setItem(productList, JSON.stringify(data));
-    }
+  const handleAddToCart = () => {
+    dispatch(addToCartSuccess(id, name, price, description, image, discount));
   };
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const checkProductCart = (id) => {
-    let data = JSON.parse(recoveredData);
-    const filterData = data?.some((product) => product.id === id);
-    setExist(filterData);
-    return filterData;
-  };
-
-  useEffect(() => {
-    checkProductCart(id);
-  }, [checkProductCart, exist, id]);
 
   return (
     <>
@@ -105,9 +85,7 @@ const Product = ({
         <div className="add-car">
           <button
             disabled={exist}
-            onClick={() =>
-              handleAddToCart(id, name, price, description, image, discount)
-            }
+            onClick={() => handleAddToCart()}
             title={!exist ? "Agregar al Carrito" : "Producto en carrito"}
           >
             {!exist ? "Agregar al Carrito" : "Producto en carrito"}

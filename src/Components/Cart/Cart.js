@@ -4,36 +4,25 @@ import ProductImage from "../ProductImage/ProductImage";
 import ProductInfoHeader from "../ProductInfoHeader/ProductInfoHeader";
 import ProductPrice from "../ProductPrice/ProductPrice";
 import { Delete } from "../assets/index";
+import { useSelector, useDispatch } from "react-redux";
 import "./Cart.css";
+import { removeProduct } from "../../actions/actions";
 
 const Cart = () => {
+  const products = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
   const [itemsCart, setItemsCart] = useState([]);
-  const getItemsCart = () => {
-    const products = JSON.parse(localStorage.getItem("product-list"));
-    setItemsCart(products);
-  };
+  const { cart, total, quantity } = itemsCart;
 
-  const getSumAllCart = () => {
-    const sum = itemsCart
-      .map((product) => JSON.parse(product.price))
-      .reduce((previosValue, currentValue) => previosValue + currentValue, 0);
-
-    return sum;
-  };
-
-  const deleteProduct = (id) => {
-    const newArrayCartProd = itemsCart.filter((product) => product.id !== id);
-    setItemsCart(newArrayCartProd);
-    localStorage.setItem("product-list", JSON.stringify(newArrayCartProd));
-  };
+  console.log("products itemsCart", itemsCart);
 
   useEffect(() => {
-    getItemsCart();
-  }, []);
+    setItemsCart(products);
+  }, [products]);
 
   return (
     <section className="cart">
-      {itemsCart?.map((item) => (
+      {cart?.map((item) => (
         <div
           className="cart-info"
           key={`${item?.id} + ${new Date().getMilliseconds()}`}
@@ -61,16 +50,16 @@ const Cart = () => {
               src={Delete}
               alt="eliminar producto"
               title="Eliminar producto"
-              onClick={() => deleteProduct(item.id)}
+              onClick={() => dispatch(removeProduct(item.id))}
             />
           </div>
         </div>
       ))}
       <div className="cart-sum">
-        {itemsCart?.length ? (
+        {cart?.length ? (
           <div className="cart-sum-data">
-            <p>{`Tu pedido: ( ${itemsCart.length} )`}</p>
-            <p>{`Total: ${formatPrice.format(getSumAllCart())}`}</p>
+            <p>{`Tu pedido: ( ${quantity} )`}</p>
+            <p>{`Total: ${formatPrice.format(total)}`}</p>
           </div>
         ) : (
           ""
