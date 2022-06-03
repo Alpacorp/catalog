@@ -13,7 +13,7 @@ const initialState = {
   error: null,
 };
 
-const addProducts = (state = initialState, action) => {
+const addProductsReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_PRODUCTS_START:
       return {
@@ -46,4 +46,4 @@ const addProducts = (state = initialState, action) => {
   }
 };
 
-export default addProducts;
+export default addProductsReducer;

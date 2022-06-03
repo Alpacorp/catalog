@@ -12,16 +12,30 @@ const Cart = () => {
   const products = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [itemsCart, setItemsCart] = useState([]);
-  const { cart, total, quantity } = itemsCart;
+  const [loading, setLoading] = useState(false);
+  const { cart, total, quantity, isLoading } = itemsCart;
 
   console.log("products itemsCart", itemsCart);
+  console.log("isLoading", isLoading);
+
+  const loader = () => {
+    if (isLoading) {
+      setLoading(true);
+    } else {
+      setLoading(false);
+    }
+  };
+
+  console.log("loading", loading);
 
   useEffect(() => {
     setItemsCart(products);
+    loader();
   }, [products]);
 
   return (
     <section className="cart">
+      {loading && <h1>Cargando ...</h1>}
       {cart?.map((item) => (
         <div
           className="cart-info"

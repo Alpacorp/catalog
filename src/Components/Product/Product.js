@@ -11,7 +11,7 @@ import ProductPrice from "../ProductPrice/ProductPrice";
 import "./Product.css";
 import Counter from "../Counter/Counter";
 import { useDispatch } from "react-redux";
-import { addToCartSuccess } from "../../actions/actions";
+import { addToCartStart, addToCartSuccess } from "../../actions/actions";
 
 const Product = ({
   id,
@@ -35,6 +35,7 @@ const Product = ({
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
+    dispatch(addToCartStart(id));
     dispatch(addToCartSuccess(id, name, price, description, image, discount));
   };
 
