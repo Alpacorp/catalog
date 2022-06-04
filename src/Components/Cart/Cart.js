@@ -6,36 +6,20 @@ import ProductPrice from "../ProductPrice/ProductPrice";
 import { Delete } from "../assets/index";
 import { useSelector, useDispatch } from "react-redux";
 import "./Cart.css";
-import { removeProduct } from "../../actions/actions";
+import { removeProduct } from "../../actions/cart";
 
 const Cart = () => {
   const products = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [itemsCart, setItemsCart] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const { cart, total, quantity, isLoading } = itemsCart;
-
-  console.log("products itemsCart", itemsCart);
-  console.log("isLoading", isLoading);
-
-  const loader = () => {
-    if (isLoading) {
-      setLoading(true);
-    } else {
-      setLoading(false);
-    }
-  };
-
-  console.log("loading", loading);
+  const { cart, total, quantity } = itemsCart;
 
   useEffect(() => {
     setItemsCart(products);
-    loader();
   }, [products]);
 
   return (
     <section className="cart">
-      {loading && <h1>Cargando ...</h1>}
       {cart?.map((item) => (
         <div
           className="cart-info"
