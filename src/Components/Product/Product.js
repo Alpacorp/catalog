@@ -11,19 +11,21 @@ import ProductPrice from "../ProductPrice/ProductPrice";
 import "./Product.css";
 import Counter from "../Counter/Counter";
 import { useDispatch } from "react-redux";
-import { addToCartStart, addToCartSuccess } from "../../actions/actions";
+import { addToCartSuccess } from "../../actions/cart";
 
-const Product = ({
-  id,
-  name,
-  price,
-  description,
-  features,
-  tags,
-  image,
-  discount,
-  promo,
-}) => {
+const Product = (props) => {
+  let {
+    id,
+    name,
+    price,
+    description,
+    features,
+    tags,
+    image,
+    discount,
+    promo,
+    quantity,
+  } = props;
   console.log("cargue de producto");
   const [modalState, setModalState] = useState(false);
   const [exist, setExist] = useState();
@@ -35,8 +37,9 @@ const Product = ({
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
-    dispatch(addToCartStart(id));
-    dispatch(addToCartSuccess(id, name, price, description, image, discount));
+    dispatch(
+      addToCartSuccess(id, name, price, description, image, discount, quantity)
+    );
   };
 
   return (
