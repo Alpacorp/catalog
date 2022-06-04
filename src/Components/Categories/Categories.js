@@ -11,14 +11,10 @@ import "./Categories.css";
 const Categories = () => {
   const dispatch = useDispatch();
   const getAllProductsState = useSelector((state) => state.products);
-  console.log("getAllProductsState", getAllProductsState);
   const products = getAllProductsState?.products[0]?.data;
-  console.log("products", products);
   const getAllCategoriesState = useSelector((state) => state.categories);
-  console.log("getAllCategoriesState", getAllCategoriesState);
   const categories = getAllCategoriesState?.categories[0]?.data;
-  const [productList, setProductList] = useState();
-  console.log("productList", productList);
+  // const [productList, setProductList] = useState([]);
 
   const setAllCategoriesState = () => {
     getCategories()
@@ -43,19 +39,19 @@ const Categories = () => {
   useEffect(() => {
     setAllProductsState();
     setAllCategoriesState();
-    setProductList({ products });
+    // setProductList(products);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleFilterCategory = (cat) => {
-    const catFilter = products.filter((product) => product.category === cat);
+  // const handleFilterCategory = (cat) => {
+  //   const catFilter = products.filter((product) => product.category === cat);
 
-    if (cat === 0) {
-      setProductList(products);
-    } else {
-      setProductList(catFilter);
-    }
-  };
+  //   if (cat === 0) {
+  //     setProductList(products);
+  //   } else {
+  //     setProductList(catFilter);
+  //   }
+  // };
 
   return (
     <>
@@ -73,7 +69,7 @@ const Categories = () => {
                 <button
                   className="button-cat"
                   key={id}
-                  onClick={() => handleFilterCategory(id)}
+                  // onClick={() => handleFilterCategory(id)}
                 >
                   <img
                     className="icon-image"
@@ -89,7 +85,7 @@ const Categories = () => {
       </section>
       <section>
         <div className="products">
-          <ProductList products={productList} />
+          <ProductList products={products} />
         </div>
       </section>
     </>

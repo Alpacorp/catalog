@@ -4,17 +4,9 @@ export const addToCartStart = () => ({
   type: cartProductsAction.ADD_PRODUCTS_START,
 });
 
-export const addToCartSuccess = (
-  id,
-  name,
-  price,
-  description,
-  image,
-  discount,
-  quantity
-) => ({
+export const addToCartSuccess = (product) => ({
   type: cartProductsAction.ADD_PRODUCTS_SUCCESS,
-  payload: { id, name, price, description, image, discount, quantity },
+  payload: product,
 });
 
 export const addToCartFailure = (error) => ({
