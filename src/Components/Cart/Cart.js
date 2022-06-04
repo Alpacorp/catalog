@@ -6,15 +6,13 @@ import ProductPrice from "../ProductPrice/ProductPrice";
 import { Delete } from "../assets/index";
 import { useSelector, useDispatch } from "react-redux";
 import "./Cart.css";
-import { removeProduct } from "../../actions/actions";
+import { removeProduct } from "../../actions/cart";
 
 const Cart = () => {
   const products = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const [itemsCart, setItemsCart] = useState([]);
   const { cart, total, quantity } = itemsCart;
-
-  console.log("products itemsCart", itemsCart);
 
   useEffect(() => {
     setItemsCart(products);

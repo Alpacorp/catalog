@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { memo, useCallback, useState } from "react";
 import PropTypes from "prop-types";
 import { formatPrice } from "../../utils/formatPrice.";
 import ModalProduct from "../ModalProduct/ModalProduct";
@@ -11,19 +11,21 @@ import ProductPrice from "../ProductPrice/ProductPrice";
 import "./Product.css";
 import Counter from "../Counter/Counter";
 import { useDispatch } from "react-redux";
-import { addToCartSuccess } from "../../actions/actions";
+import { addToCartSuccess } from "../../actions/cart";
 
-const Product = ({
-  id,
-  name,
-  price,
-  description,
-  features,
-  tags,
-  image,
-  discount,
-  promo,
-}) => {
+const Product = (product) => {
+  const {
+    id,
+    name,
+    price,
+    description,
+    features,
+    tags,
+    image,
+    discount,
+    promo,
+    quantity,
+  } = product;
   console.log("cargue de producto");
   const [modalState, setModalState] = useState(false);
   const [exist, setExist] = useState();
@@ -35,7 +37,7 @@ const Product = ({
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
-    dispatch(addToCartSuccess(id, name, price, description, image, discount));
+    dispatch(addToCartSuccess(product));
   };
 
   return (
@@ -108,4 +110,4 @@ Product.propTypes = {
   promo: PropTypes.bool,
 };
 
-export default Product;
+export default memo(Product);

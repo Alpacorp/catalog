@@ -1,29 +1,64 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import "./Categories.css";
 import ProductList from "../Product/ProductList";
+import { useDispatch, useSelector } from "react-redux";
+import { getCategoriesSuccess } from "../../actions/categories";
+import { getCategories } from "../../apis/data";
+import { getProductsSuccess } from "../../actions/products";
+import { getProducts } from "../../apis/data";
+import "./Categories.css";
 
-const Categories = ({ categories, products }) => {
-  const [productList, setProductList] = useState(products.data);
+const Categories = () => {
+  const dispatch = useDispatch();
+  const getAllProductsState = useSelector((state) => state.products);
+  const products = getAllProductsState?.products[0]?.data;
+  const getAllCategoriesState = useSelector((state) => state.categories);
+  const categories = getAllCategoriesState?.categories[0]?.data;
+  // const [productList, setProductList] = useState([]);
 
-  const handleFilterCategory = (cat) => {
-    const catFilter = products.data.filter(
-      (product) => product.category === cat
-    );
-
-    if (cat === 0) {
-      setProductList(products.data);
-    } else {
-      setProductList(catFilter);
-    }
+  const setAllCategoriesState = () => {
+    getCategories()
+      .then((response) => {
+        dispatch(getCategoriesSuccess(response));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
+
+  const setAllProductsState = () => {
+    getProducts()
+      .then((response) => {
+        dispatch(getProductsSuccess(response));
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    setAllProductsState();
+    setAllCategoriesState();
+    // setProductList(products);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // const handleFilterCategory = (cat) => {
+  //   const catFilter = products.filter((product) => product.category === cat);
+
+  //   if (cat === 0) {
+  //     setProductList(products);
+  //   } else {
+  //     setProductList(catFilter);
+  //   }
+  // };
 
   return (
     <>
       <section className="categories">
         <nav>
           <ul tabIndex="0">
-            {categories.data.map(({ id, category, image }) => (
+            {categories?.map(({ id, category, image }) => (
               <li
                 aria-label={category}
                 key={id + category}
@@ -34,7 +69,7 @@ const Categories = ({ categories, products }) => {
                 <button
                   className="button-cat"
                   key={id}
-                  onClick={() => handleFilterCategory(id)}
+                  // onClick={() => handleFilterCategory(id)}
                 >
                   <img
                     className="icon-image"
@@ -50,7 +85,7 @@ const Categories = ({ categories, products }) => {
       </section>
       <section>
         <div className="products">
-          <ProductList products={productList} />
+          <ProductList products={products} />
         </div>
       </section>
     </>
