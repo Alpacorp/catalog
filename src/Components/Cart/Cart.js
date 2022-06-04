@@ -1,22 +1,22 @@
 import { useState, useEffect } from "react";
-import { formatPrice } from "../../utils/formatPrice.";
+import { useSelector, useDispatch } from "react-redux";
 import ProductImage from "../ProductImage/ProductImage";
 import ProductInfoHeader from "../ProductInfoHeader/ProductInfoHeader";
 import ProductPrice from "../ProductPrice/ProductPrice";
+import { formatPrice } from "../../utils/formatPrice.";
 import { Delete } from "../assets/index";
-import { useSelector, useDispatch } from "react-redux";
-import "./Cart.css";
 import { removeProduct } from "../../actions/cart";
+import "./Cart.css";
 
 const Cart = () => {
-  const products = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+  const productsInCart = useSelector((state) => state.cart);
   const [itemsCart, setItemsCart] = useState([]);
   const { cart, total, quantity } = itemsCart;
 
   useEffect(() => {
-    setItemsCart(products);
-  }, [products]);
+    setItemsCart(productsInCart);
+  }, [productsInCart]);
 
   return (
     <section className="cart">

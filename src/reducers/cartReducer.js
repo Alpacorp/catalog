@@ -31,7 +31,9 @@ export const addProductsReducer = (state = initialState, action) => {
       return {
         ...state,
         cart: state.cart.filter((product) => product.id !== action.payload),
-        total: state.total - action.payload.price,
+        total:
+          state.total -
+          state.cart.find((product) => product.id === action.payload).price,
         quantity: state.quantity - 1,
       };
     default:
