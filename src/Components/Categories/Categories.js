@@ -1,47 +1,64 @@
-import { useEffect, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import ProductList from "../Product/ProductList";
 import { useDispatch, useSelector } from "react-redux";
-import { getCategoriesSuccess } from "../../actions/categories";
+import {
+  getCategoriesFailure,
+  getCategoriesStart,
+  getCategoriesSuccess,
+} from "../../actions/categories";
+import {
+  getProductsStart,
+  getProductsSuccess,
+  getproductsFailure,
+} from "../../actions/products";
 import { getCategories } from "../../apis/data";
-import { getProductsSuccess } from "../../actions/products";
 import { getProducts } from "../../apis/data";
 import "./Categories.css";
 
 const Categories = () => {
+  console.log("cargue de categorias");
   const dispatch = useDispatch();
   const getAllProductsState = useSelector((state) => state.products);
   const products = getAllProductsState?.products[0]?.data;
   const getAllCategoriesState = useSelector((state) => state.categories);
   const categories = getAllCategoriesState?.categories[0]?.data;
+
+  const [loading, setLoading] = useState(false);
+  const [categoriesList, setCategoriesList] = useState([]);
+
+  useEffect(() => {
+    setCategoriesList(categories);
+  }, [categories]);
+
+  if (getAllCategoriesState.loading) {
+    console.log("loading");
+  }
   // const [productList, setProductList] = useState([]);
 
   const setAllCategoriesState = () => {
     getCategories()
       .then((response) => {
+        dispatch(getCategoriesStart());
         dispatch(getCategoriesSuccess(response));
       })
       .catch((error) => {
         console.log(error);
+        dispatch(getCategoriesFailure(error));
       });
   };
 
   const setAllProductsState = () => {
     getProducts()
       .then((response) => {
+        dispatch(getProductsStart());
         dispatch(getProductsSuccess(response));
       })
       .catch((error) => {
         console.log(error);
+        dispatch(getproductsFailure(error));
       });
   };
-
-  useEffect(() => {
-    setAllProductsState();
-    setAllCategoriesState();
-    // setProductList(products);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   // const handleFilterCategory = (cat) => {
   //   const catFilter = products.filter((product) => product.category === cat);
@@ -53,12 +70,29 @@ const Categories = () => {
   //   }
   // };
 
+  const setLoadingState = () => {
+    if (getAllCategoriesState.loading) {
+      setLoading(true);
+    } else {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    setAllProductsState();
+    setAllCategoriesState();
+    setLoadingState();
+    // setProductList(products);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <>
       <section className="categories">
+        {loading ? <h1>Loading</h1> : ""}
         <nav>
           <ul tabIndex="0">
-            {categories?.map(({ id, category, image }) => (
+            {categoriesList?.map(({ id, category, image }) => (
               <li
                 aria-label={category}
                 key={id + category}
@@ -97,4 +131,4 @@ Categories.propTypes = {
   products: PropTypes.object.isRequired,
 };
 
-export default Categories;
+export default memo(Categories);

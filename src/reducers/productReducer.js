@@ -14,9 +14,10 @@ export const getProductsReducer = (state = initialState, action) => {
       return {
         ...state,
         products: [...state.products, action.payload],
+        loading: false,
       };
     case getProductsAction.GET_PRODUCTS_FAILURE:
-      return { ...state, error: action.payload };
+      return { ...state, error: action.payload, loading: false };
     default:
       return state;
   }

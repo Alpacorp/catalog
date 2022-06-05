@@ -1,6 +1,6 @@
 import { getProductsAction } from "../constants/ActionTypes";
 
-export const getProducts = () => ({
+export const getProductsStart = () => ({
   type: getProductsAction.GET_PRODUCTS,
 });
 

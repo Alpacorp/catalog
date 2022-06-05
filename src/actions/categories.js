@@ -1,6 +1,6 @@
 import { getCategoriesAction } from "../constants/ActionTypes";
 
-export const getCategories = () => ({
+export const getCategoriesStart = () => ({
   type: getCategoriesAction.GET_CATEGORIES,
 });
 

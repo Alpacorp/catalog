@@ -14,9 +14,10 @@ export const getCategoriesReducer = (state = initialState, action) => {
       return {
         ...state,
         categories: [...state.categories, action.payload],
+        loading: false,
       };
     case getCategoriesAction.GET_CATEGORIES_FAILURE:
-      return { ...state, error: action.payload };
+      return { ...state, error: action.payload, loading: false };
     default:
       return state;
   }
