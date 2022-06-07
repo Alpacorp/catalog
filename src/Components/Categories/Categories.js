@@ -1,7 +1,8 @@
 import { memo, useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import ProductList from "../Product/ProductList";
 import { useDispatch, useSelector } from "react-redux";
+import ProductList from "../Product/ProductList";
+import ModalProduct from "../ModalProduct/ModalProduct";
 import {
   getCategoriesFailure,
   getCategoriesStart,
@@ -17,24 +18,20 @@ import { getProducts } from "../../apis/data";
 import "./Categories.css";
 
 const Categories = () => {
-  console.log("cargue de categorias");
+  console.log("cargue de categoria");
   const dispatch = useDispatch();
-  const getAllProductsState = useSelector((state) => state.products);
-  const products = getAllProductsState?.products[0]?.data;
-  const getAllCategoriesState = useSelector((state) => state.categories);
-  const categories = getAllCategoriesState?.categories[0]?.data;
-
-  const [loading, setLoading] = useState(false);
+  const { products } = useSelector((state) => state.products);
+  const { categories, loading } = useSelector((state) => state.categories);
   const [categoriesList, setCategoriesList] = useState([]);
+  const [loadingView, setLoadingView] = useState(false);
 
   useEffect(() => {
     setCategoriesList(categories);
   }, [categories]);
 
-  if (getAllCategoriesState.loading) {
+  if (loadingView) {
     console.log("loading");
   }
-  // const [productList, setProductList] = useState([]);
 
   const setAllCategoriesState = () => {
     getCategories()
@@ -71,10 +68,10 @@ const Categories = () => {
   // };
 
   const setLoadingState = () => {
-    if (getAllCategoriesState.loading) {
-      setLoading(true);
+    if (loading) {
+      setLoadingView(true);
     } else {
-      setLoading(false);
+      setLoadingView(false);
     }
   };
 
@@ -82,7 +79,6 @@ const Categories = () => {
     setAllProductsState();
     setAllCategoriesState();
     setLoadingState();
-    // setProductList(products);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -92,7 +88,7 @@ const Categories = () => {
         {loading ? <h1>Loading</h1> : ""}
         <nav>
           <ul tabIndex="0">
-            {categoriesList?.map(({ id, category, image }) => (
+            {categoriesList[0]?.data?.map(({ id, category, image }) => (
               <li
                 aria-label={category}
                 key={id + category}
@@ -119,7 +115,8 @@ const Categories = () => {
       </section>
       <section>
         <div className="products">
-          <ProductList products={products} />
+          <ProductList products={products[0]?.data} />
+          <ModalProduct />
         </div>
       </section>
     </>

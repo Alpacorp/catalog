@@ -20,8 +20,8 @@ const ProductPrice = ({ discount, price, formatPrice }) => {
 
 ProductPrice.propTypes = {
   discount: PropTypes.number,
-  price: PropTypes.number.isRequired,
-  formatPrice: PropTypes.object.isRequired,
+  price: PropTypes.number,
+  formatPrice: PropTypes.object,
 };
 
 export default ProductPrice;

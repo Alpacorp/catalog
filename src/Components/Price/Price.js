@@ -11,8 +11,8 @@ const Price = ({ price, formatPrice }) => {
 };
 
 Price.propTypes = {
-  price: PropTypes.number.isRequired,
-  formatPrice: PropTypes.object.isRequired,
+  price: PropTypes.number,
+  formatPrice: PropTypes.object,
 };
 
 export default Price;
