@@ -13,8 +13,8 @@ const Description = ({ description, styleDesc }) => {
 };
 
 Description.propTypes = {
-  description: PropTypes.string.isRequired,
-  styleDesc: PropTypes.string.isRequired,
+  description: PropTypes.string,
+  styleDesc: PropTypes.string,
 };
 
 export default Description;
