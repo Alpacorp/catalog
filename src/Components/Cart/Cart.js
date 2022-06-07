@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, memo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import ProductImage from "../ProductImage/ProductImage";
 import ProductInfoHeader from "../ProductInfoHeader/ProductInfoHeader";
@@ -9,6 +9,7 @@ import { removeProduct } from "../../actions/cart";
 import "./Cart.css";
 
 const Cart = () => {
+  console.log("cargue de cart");
   const dispatch = useDispatch();
   const productsInCart = useSelector((state) => state.cart);
   const [itemsCart, setItemsCart] = useState([]);
@@ -67,4 +68,4 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default memo(Cart);

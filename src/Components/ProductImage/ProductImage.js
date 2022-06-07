@@ -14,10 +14,10 @@ const ProductImage = ({ id, image, name, styleImg }) => {
 };
 
 ProductImage.propTypes = {
-  id: PropTypes.number.isRequired,
-  image: PropTypes.any.isRequired,
-  name: PropTypes.string.isRequired,
-  styleImg: PropTypes.string.isRequired,
+  id: PropTypes.number,
+  image: PropTypes.any,
+  name: PropTypes.string,
+  styleImg: PropTypes.string,
 };
 
 export default ProductImage;
