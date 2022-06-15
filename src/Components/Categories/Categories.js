@@ -24,10 +24,11 @@ const Categories = () => {
   const { categories, loading } = useSelector((state) => state.categories);
   const [categoriesList, setCategoriesList] = useState([]);
   const [loadingView, setLoadingView] = useState(false);
+  const [productsList, setProductsList] = useState([]);
 
-  useEffect(() => {
-    setCategoriesList(categories);
-  }, [categories]);
+  const loadInitial = () => {
+    setProductsList(products[0]?.data);
+  };
 
   if (loadingView) {
     console.log("loading");
@@ -57,15 +58,17 @@ const Categories = () => {
       });
   };
 
-  // const handleFilterCategory = (cat) => {
-  //   const catFilter = products.filter((product) => product.category === cat);
+  const handleFilterCategory = (id) => {
+    const filterProduct = products[0]?.data?.filter(
+      (product) => product.category === id
+    );
 
-  //   if (cat === 0) {
-  //     setProductList(products);
-  //   } else {
-  //     setProductList(catFilter);
-  //   }
-  // };
+    if (id === 0) {
+      setProductsList(products[0]?.data);
+    } else {
+      setProductsList(filterProduct);
+    }
+  };
 
   const setLoadingState = () => {
     if (loading) {
@@ -76,9 +79,14 @@ const Categories = () => {
   };
 
   useEffect(() => {
+    setCategoriesList(categories);
+  }, [categories]);
+
+  useEffect(() => {
     setAllProductsState();
     setAllCategoriesState();
     setLoadingState();
+    loadInitial();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -89,17 +97,11 @@ const Categories = () => {
         <nav>
           <ul tabIndex="0">
             {categoriesList[0]?.data?.map(({ id, category, image }) => (
-              <li
-                aria-label={category}
-                key={id + category}
-                onClick={() => {
-                  console.log("click en lista");
-                }}
-              >
+              <li aria-label={category} key={id + category}>
                 <button
                   className="button-cat"
                   key={id}
-                  // onClick={() => handleFilterCategory(id)}
+                  onClick={() => handleFilterCategory(id)}
                 >
                   <img
                     className="icon-image"
@@ -115,7 +117,7 @@ const Categories = () => {
       </section>
       <section>
         <div className="products">
-          <ProductList products={products[0]?.data} />
+          <ProductList products={productsList ?? products[0]?.data} />
           <ModalProduct />
         </div>
       </section>

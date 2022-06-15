@@ -3,7 +3,6 @@ import { addProductsReducer } from "../reducers/cartReducer";
 import { getCategoriesReducer } from "../reducers/categoryReducer";
 import { getModalProductReducer } from "../reducers/modalProductReducer";
 import { getProductsReducer } from "../reducers/productReducer";
-import { getProductsFilterReducer } from "../reducers/productsFilterReducer";
 
 export const store = configureStore({
   reducer: {
@@ -11,6 +10,5 @@ export const store = configureStore({
     products: getProductsReducer,
     categories: getCategoriesReducer,
     modalProduct: getModalProductReducer,
-    filterList: getProductsFilterReducer,
   },
 });
