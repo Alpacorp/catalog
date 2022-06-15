@@ -15,7 +15,7 @@ const Product = (product) => {
   const { id, name, price, features, tags, image, discount, promo } = product;
   const dispatch = useDispatch();
 
-  const handleShowHide = () => {
+  const handleShowHideModal = () => {
     dispatch(getModalproductSuccess(product));
   };
 
@@ -38,7 +38,7 @@ const Product = (product) => {
           <Features features={features} id={id} />
           <Tags tags={tags} id={id} />
           <div className="product-button">
-            <button onClick={handleShowHide}>Detalles de {name}</button>
+            <button onClick={handleShowHideModal}>Detalles de {name}</button>
           </div>
         </div>
       </section>

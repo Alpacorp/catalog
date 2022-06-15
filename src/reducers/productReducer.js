@@ -16,6 +16,12 @@ export const getProductsReducer = (state = initialState, action) => {
         products: [...state.products, action.payload],
         loading: false,
       };
+    case getProductsAction.GET_PRODUCTS_FILTERED:
+      return {
+        ...state,
+        products: [...action.payload],
+        loading: false,
+      };
     case getProductsAction.GET_PRODUCTS_FAILURE:
       return { ...state, error: action.payload, loading: false };
     default:
