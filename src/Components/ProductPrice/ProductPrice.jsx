@@ -1,11 +1,11 @@
 import PropTypes from "prop-types";
 import Price from "../Price/Price";
 import PriceDiscount from "../PriceDiscount/PriceDiscount";
-import "./ProductPrice.css";
+// import "./ProductPrice.css";
 
 const ProductPrice = ({ discount, price, formatPrice }) => {
   return (
-    <div className="product-price">
+    <div data-testid="test-div-product-price" className="product-price">
       {discount ? (
         <>
           <PriceDiscount price={price} formatPrice={formatPrice} />
@@ -20,7 +20,7 @@ const ProductPrice = ({ discount, price, formatPrice }) => {
 
 ProductPrice.propTypes = {
   discount: PropTypes.number,
-  price: PropTypes.number,
+  price: PropTypes.number.isRequired,
   formatPrice: PropTypes.object,
 };
 

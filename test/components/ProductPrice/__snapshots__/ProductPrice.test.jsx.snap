@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on <ProductPrice /> the component tobe match with snapshot 1`] = `
+<div
+  class="product-price"
+  data-testid="test-div-product-price"
+>
+  <div>
+    <h3
+      aria-label="100"
+      tabindex="0"
+    />
+  </div>
+</div>
+`;
