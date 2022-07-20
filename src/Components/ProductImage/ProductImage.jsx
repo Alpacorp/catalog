@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-// import "./ProductImage.css";
+import "./ProductImage.css";
 
 const ProductImage = ({ id, image, name, styleImg }) => {
   return (

@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-// import "./PriceDiscount.css";
+import "./PriceDiscount.css";
 
 const PriceDiscount = ({ price, formatPrice }) => {
   return (
