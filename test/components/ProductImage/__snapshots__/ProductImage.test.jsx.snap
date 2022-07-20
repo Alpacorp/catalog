@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <ProductImage /> should render to match snapshot 1`] = `
+<div>
+  <div
+    class="product-image"
+    data-testid="test-div-img"
+    tabindex="0"
+  >
+    <figure>
+      <img
+        alt="Product 1"
+        src="https://via.placeholder.com/150"
+      />
+    </figure>
+  </div>
+</div>
+`;
