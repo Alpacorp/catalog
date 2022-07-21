@@ -1,11 +1,16 @@
 import PropTypes from "prop-types";
-import "./Tags.css";
+// import "./Tags.css";
 
 const Tags = ({ tags, id }) => {
   return (
-    <div className="tags" tabIndex="0">
+    <div data-testid="test-div-tags" className="tags" tabIndex="0">
       {tags?.map((tag) => (
-        <small aria-label={tag} className="tag" key={id + tag}>
+        <small
+          data-testid="test-small-tag"
+          aria-label={tag}
+          className="tag"
+          key={id + tag}
+        >
           <strong>{tag}</strong>
         </small>
       ))}
