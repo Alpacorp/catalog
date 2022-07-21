@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on <Tags /> component Component should render to match snapshot 1`] = `
+<div
+  class="tags"
+  data-testid="test-div-tags"
+  tabindex="0"
+>
+  <small
+    aria-label="tag1"
+    class="tag"
+    data-testid="test-small-tag"
+  >
+    <strong>
+      tag1
+    </strong>
+  </small>
+</div>
+`;

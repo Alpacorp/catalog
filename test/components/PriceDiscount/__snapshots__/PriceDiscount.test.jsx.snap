@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on <PriceDiscount /> the component should render to match snapshot 1`] = `
+<PriceDiscount
+  formatPrice={NumberFormat {}}
+  price={100}
+/>
+`;
