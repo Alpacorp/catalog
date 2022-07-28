@@ -1,8 +1,8 @@
 .main {
   background-color: #fff;
+  margin: auto;
   max-width: 900px;
   width: 100%;
-  margin: auto;
 }
 
 .title-store,

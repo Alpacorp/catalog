@@ -1,8 +1,8 @@
 .footer-info {
-  text-align: center;
-  padding-block: 20px;
   background-color: salmon;
   font-size: 10px;
+  padding-block: 20px;
+  text-align: center;
 }
 
 .footer-info a {

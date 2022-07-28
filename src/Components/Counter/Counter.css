@@ -3,11 +3,11 @@
 }
 
 .counter .counter-action {
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: space-evenly;
-  width: 50%;
   margin: 0 auto;
+  width: 50%;
 }
 
 .counter h6 {

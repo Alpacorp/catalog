@@ -3,10 +3,10 @@
 }
 
 .cart .cart-info {
+  align-items: center;
   border: 1px solid gray;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
 }
 
 .cart .product-image-cart figure img {
@@ -32,11 +32,11 @@
 }
 
 .cart .cart-sum {
-  text-align: right;
-  font-weight: bold;
-  font-size: 12px;
   display: flex;
+  font-size: 12px;
+  font-weight: bold;
   justify-content: space-evenly;
+  text-align: right;
 }
 
 .cart-sum .cart-sum-data {

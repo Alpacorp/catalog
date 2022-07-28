@@ -1,48 +1,48 @@
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  text-align: center;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  z-index: 1;
   background: rgba(0, 0, 0, 0.12);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  text-align: center;
+  top: 0;
   transition: all 500ms ease;
+  width: 100vw;
+  z-index: 1;
   z-index: 1;
 }
 
 .modal .container {
-  width: 500px;
-  height: auto;
-  margin: auto;
   background-color: #fff;
   box-shadow: 1px 7px 25px rgba(0, 0, 0, 0.05);
-  transition: all 500ms ease;
+  height: auto;
+  margin: auto;
   position: relative;
+  transition: all 500ms ease;
+  width: 500px;
 }
 
 .container .header {
-  display: flex;
   align-items: center;
-  justify-content: space-between;
   background-color: salmon;
+  display: flex;
+  justify-content: space-between;
   padding: 20px;
 }
 
 .close-icon {
-  cursor: pointer;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 30px;
-  height: 30px;
   background: none;
-  transition: 0.3s ease all;
   border-radius: 5px;
   color: #1766dc;
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  transition: 0.3s ease all;
+  width: 30px;
 }
 
 .close-icon:hover {

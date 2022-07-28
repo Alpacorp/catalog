@@ -7,17 +7,17 @@
 }
 
 .product-image img {
-  width: 100%;
-  max-width: 250px;
   /* max-height: 180px; */
   border-radius: 5px;
+  max-width: 250px;
   object-fit: contain;
+  width: 100%;
 }
 
 .product-image-modal img {
-  width: 50%;
   border-radius: 5px;
   touch-action: manipulation;
+  width: 50%;
 }
 
 @media screen and (max-width: 750px) {
@@ -30,7 +30,7 @@
   }
 
   .product-image img {
-    width: 100%;
     height: auto;
+    width: 100%;
   }
 }
