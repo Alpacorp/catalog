@@ -9,9 +9,11 @@ const ProductImage = ({ id, image, name, styleImg }) => {
         className={styleImg}
         key={id + "image"}
         tabIndex="0"
+        itemScope
+        itemType="http://schema.org/Thing"
       >
         <figure>
-          <img src={image} alt={name} />
+          <img itemProp="image" src={image} alt={name} />
         </figure>
       </div>
     </>
