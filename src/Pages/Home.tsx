@@ -1,3 +1,4 @@
+import React from "react";
 import Cart from "../Components/Cart/Cart";
 import Categories from "../Components/Categories/Categories";
 import Footer from "../Components/Footer/Footer";
