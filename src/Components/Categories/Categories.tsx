@@ -17,16 +17,16 @@ import { getCategories } from "../../apis/data";
 import { getProducts } from "../../apis/data";
 import "./Categories.css";
 
-const Categories = () => {
+const Categories: React.FC = () => {
   console.log("cargue de categoria");
   const dispatch = useDispatch();
-  const { products } = useSelector((state) => state.products);
-  const { categories, loading } = useSelector((state) => state.categories);
-  const [categoriesList, setCategoriesList] = useState([]);
-  const [loadingView, setLoadingView] = useState(false);
-  const [productsList, setProductsList] = useState([]);
+  const { products } = useSelector((state: any) => state.products);
+  const { categories, loading } = useSelector((state: any) => state.categories);
+  const [categoriesList, setCategoriesList] = useState<any>([]);
+  const [loadingView, setLoadingView] = useState<Boolean>(false);
+  const [productsList, setProductsList] = useState<string[]>([]);
 
-  const loadInitial = () => {
+  const loadInitial = (): void => {
     setProductsList(products[0]?.data);
   };
 
@@ -34,7 +34,7 @@ const Categories = () => {
     console.log("loading");
   }
 
-  const setAllCategoriesState = () => {
+  const setAllCategoriesState = (): void => {
     getCategories()
       .then((response) => {
         dispatch(getCategoriesStart());
@@ -46,7 +46,7 @@ const Categories = () => {
       });
   };
 
-  const setAllProductsState = () => {
+  const setAllProductsState = (): void => {
     getProducts()
       .then((response) => {
         dispatch(getProductsStart());
@@ -58,9 +58,9 @@ const Categories = () => {
       });
   };
 
-  const handleFilterCategory = (id) => {
+  const handleFilterCategory = (id: number): void => {
     const filterProduct = products[0]?.data?.filter(
-      (product) => product.category === id
+      (product: any) => product.category === id
     );
 
     if (id === 0) {
@@ -70,7 +70,7 @@ const Categories = () => {
     }
   };
 
-  const setLoadingState = () => {
+  const setLoadingState = (): void => {
     if (loading) {
       setLoadingView(true);
     } else {
@@ -95,8 +95,8 @@ const Categories = () => {
       <section className="categories">
         {loading ? <h1>Loading</h1> : ""}
         <nav>
-          <ul tabIndex="0">
-            {categoriesList[0]?.data?.map(({ id, category, image }) => (
+          <ul tabIndex={0}>
+            {categoriesList[0]?.data?.map(({ id, category, image }: any) => (
               <li aria-label={category} key={id + category}>
                 <button
                   className="button-cat"

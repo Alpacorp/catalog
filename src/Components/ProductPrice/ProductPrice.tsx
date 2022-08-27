@@ -3,7 +3,17 @@ import Price from "../Price/Price";
 import PriceDiscount from "../PriceDiscount/PriceDiscount";
 import "./ProductPrice.css";
 
-const ProductPrice = ({ discount, price, formatPrice }) => {
+interface ProductPriceProps {
+  discount?: number;
+  price: number;
+  formatPrice?: any;
+}
+
+const ProductPrice: React.FC<ProductPriceProps> = ({
+  discount,
+  price,
+  formatPrice,
+}) => {
   return (
     <div data-testid="test-div-product-price" className="product-price">
       {discount ? (
@@ -21,7 +31,7 @@ const ProductPrice = ({ discount, price, formatPrice }) => {
 ProductPrice.propTypes = {
   discount: PropTypes.number,
   price: PropTypes.number.isRequired,
-  formatPrice: PropTypes.object,
+  // formatPrice: PropTypes.object,
 };
 
 export default ProductPrice;

@@ -1,9 +1,13 @@
 import PropTypes from "prop-types";
-// import "./Tags.css";
 
-const Tags = ({ tags, id }) => {
+interface TagsProps {
+  tags: string[];
+  id: number;
+}
+
+const Tags: React.FC<TagsProps> = ({ tags, id }) => {
   return (
-    <div data-testid="test-div-tags" className="tags" tabIndex="0">
+    <div data-testid="test-div-tags" className="tags" tabIndex={0}>
       {tags?.map((tag) => (
         <small
           data-testid="test-small-tag"

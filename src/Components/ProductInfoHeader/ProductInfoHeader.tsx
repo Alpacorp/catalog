@@ -1,8 +1,15 @@
-import React from "react";
 import PropTypes from "prop-types";
 import "./ProductInfoHeader.css";
 
-const ProductInfoHeader = ({ promo, name }) => {
+interface ProductInfoHeaderProps {
+  promo?: Boolean;
+  name: string;
+}
+
+const ProductInfoHeader: React.FC<ProductInfoHeaderProps> = ({
+  promo,
+  name,
+}) => {
   return (
     <>
       <div
@@ -12,7 +19,7 @@ const ProductInfoHeader = ({ promo, name }) => {
       >
         {promo ? (
           <>
-            <h2 itemProp="name" aria-label={name} tabIndex="0">
+            <h2 itemProp="name" aria-label={name} tabIndex={0}>
               {name}
             </h2>
             <h4
@@ -20,13 +27,13 @@ const ProductInfoHeader = ({ promo, name }) => {
               itemType="https://schema.org/Product"
               itemProp="offers"
               aria-label={name}
-              tabIndex="0"
+              tabIndex={0}
             >
               En descuento
             </h4>
           </>
         ) : (
-          <h2 itemProp="name" aria-label={name} tabIndex="0">
+          <h2 itemProp="name" aria-label={name} tabIndex={0}>
             {name}
           </h2>
         )}

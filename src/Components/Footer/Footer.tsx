@@ -4,7 +4,7 @@ const Footer = () => {
   console.log("cargue de footer");
   return (
     <>
-      <footer className="footer-info" tabIndex="0">
+      <footer className="footer-info" tabIndex={0}>
         <h2>
           Diseñado y creado por{" "}
           <a href="https://github.com/Alpacorp" target="blank">

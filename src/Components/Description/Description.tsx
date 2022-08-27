@@ -1,10 +1,18 @@
 import PropTypes from "prop-types";
 import "./Description.css";
 
-const Description = ({ description, styleDesc }) => {
+interface DescriptionProps {
+  description?: string;
+  styleDesc?: string;
+}
+
+const Description: React.FC<DescriptionProps> = ({
+  description,
+  styleDesc,
+}) => {
   return (
     <>
-      <p className={styleDesc} aria-label={description} tabIndex="0">
+      <p className={styleDesc} aria-label={description} tabIndex={0}>
         {" "}
         {description}
       </p>

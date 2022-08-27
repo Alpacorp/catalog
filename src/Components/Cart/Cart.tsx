@@ -11,8 +11,8 @@ import "./Cart.css";
 const Cart = () => {
   console.log("cargue de cart");
   const dispatch = useDispatch();
-  const productsInCart = useSelector((state) => state.cart);
-  const [itemsCart, setItemsCart] = useState([]);
+  const productsInCart = useSelector((state: any) => state.cart);
+  const [itemsCart, setItemsCart] = useState<any>([]);
   const { cart, total, quantity } = itemsCart;
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const Cart = () => {
 
   return (
     <section className="cart">
-      {cart?.map((item) => (
+      {cart?.map((item: any) => (
         <div
           className="cart-info"
           key={`${item?.id} + ${new Date().getMilliseconds()}`}
