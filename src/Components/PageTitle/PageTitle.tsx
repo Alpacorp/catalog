@@ -6,7 +6,10 @@ interface PageTitleProps {
   styleType: string;
 }
 
-const PageTitle = ({ titleText, styleType }: PageTitleProps) => {
+const PageTitle: React.FC<PageTitleProps> = ({
+  titleText,
+  styleType,
+}: PageTitleProps) => {
   return (
     <>
       <section className={styleType}>

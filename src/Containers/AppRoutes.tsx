@@ -1,16 +1,15 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "../Pages/Home";
-import PageProduct from "../Pages/PageProduct";
+import NotFound from "../Pages/NotFound";
 
-const AppRoutes = () => {
+const AppRoutes: React.FC = () => {
   return (
     <>
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="product/:productid" element={<PageProduct />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Layout>
     </>

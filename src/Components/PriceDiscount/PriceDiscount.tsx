@@ -1,10 +1,18 @@
 import PropTypes from "prop-types";
 import "./PriceDiscount.css";
 
-const PriceDiscount = ({ price, formatPrice }) => {
+interface PriceDiscountProps {
+  price: number;
+  formatPrice: any;
+}
+
+const PriceDiscount: React.FC<PriceDiscountProps> = ({
+  price,
+  formatPrice,
+}) => {
   return (
     <div>
-      <h3 className="price-discount" aria-label={price} tabIndex="0">
+      <h3 className="price-discount" tabIndex={0}>
         {formatPrice.format(price)}
       </h3>
     </div>

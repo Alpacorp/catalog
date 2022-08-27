@@ -1,11 +1,19 @@
 import "./PageSubtitle.css";
 import PropTypes from "prop-types";
 
-const PageSubtitle = ({ titleText, styleType }) => {
+interface PageSubtitleProps {
+  titleText: string;
+  styleType: string;
+}
+
+const PageSubtitle: React.FC<PageSubtitleProps> = ({
+  titleText,
+  styleType,
+}) => {
   return (
     <>
       <section className={styleType}>
-        <h2 aria-label={titleText} tabIndex="0">
+        <h2 aria-label={titleText} tabIndex={0}>
           {titleText}
         </h2>
       </section>

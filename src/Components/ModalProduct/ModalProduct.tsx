@@ -17,7 +17,7 @@ const ModalProduct = () => {
     open,
     product,
     product: { id, image, name, price, discount, description },
-  } = useSelector((state) => state.modalProduct);
+  } = useSelector((state: any) => state.modalProduct);
 
   const showHideModalProduct = useCallback(() => {
     if (open) {
@@ -31,7 +31,7 @@ const ModalProduct = () => {
     showHideModalProduct();
   }, [product, showHideModalProduct]);
 
-  const handleAddToCart = () => {
+  const handleAddToCart = (): void => {
     dispatch(addToCartSuccess(product));
   };
 

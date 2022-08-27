@@ -1,9 +1,14 @@
 import PropTypes from "prop-types";
 import "./Features.css";
 
-const Features = ({ features, id }) => {
+interface FeaturesProps {
+  features: string[];
+  id: number;
+}
+
+const Features: React.FC<FeaturesProps> = ({ features, id }) => {
   return (
-    <div className="features" tabIndex="0">
+    <div className="features" tabIndex={0}>
       {features?.map((feature) => (
         <p aria-label={feature} className="feature" key={id + feature}>
           {feature}
