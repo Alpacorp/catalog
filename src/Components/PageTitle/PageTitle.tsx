@@ -1,11 +1,16 @@
 import "./PageTitle.css";
 import PropTypes from "prop-types";
 
-const PageTitle = ({ titleText, styleType }) => {
+interface PageTitleProps {
+  titleText: string;
+  styleType: string;
+}
+
+const PageTitle = ({ titleText, styleType }: PageTitleProps) => {
   return (
     <>
       <section className={styleType}>
-        <h1 aria-label={titleText} tabIndex="0">
+        <h1 aria-label={titleText} tabIndex={0}>
           {titleText}
         </h1>
       </section>
