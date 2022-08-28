@@ -10,25 +10,39 @@ import ProductPrice from "../ProductPrice/ProductPrice";
 import "./Product.css";
 import { getModalproductSuccess } from "../../actions/modalProduct";
 
-const Product = (product) => {
+interface ProductProps {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+  tags?: any;
+  features?: any;
+  discount?: number;
+  promo?: boolean;
+  description: string;
+}
+
+const Product: React.FC<ProductProps> = (product: ProductProps) => {
   console.log("cargue de producto");
   const { id, name, price, features, tags, image, discount, promo } = product;
+  console.log("product", typeof product);
+
   const dispatch = useDispatch();
 
-  const handleShowHideModal = () => {
+  const handleShowHideModal = (): void => {
     dispatch(getModalproductSuccess(product));
   };
 
   return (
     <>
-      <section className="product" key={id + "product"} tabIndex="0">
+      <section className="product" key={id + "product"} tabIndex={0}>
         <ProductImage
           id={id}
           image={image}
           name={name}
           styleImg={"product-image"}
         />
-        <div className="product-info" key={id + "info"} tabIndex="0">
+        <div className="product-info" key={id + "info"} tabIndex={0}>
           <ProductInfoHeader promo={promo} name={name} />
           <ProductPrice
             discount={discount}

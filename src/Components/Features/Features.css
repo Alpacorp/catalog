@@ -3,7 +3,6 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-block: 2px;
 }
 
 .product-info .feature {
@@ -13,9 +12,7 @@
   color: #000;
   font-size: 10px;
   font-weight: bold;
-  margin-block-start: 3px;
   margin-inline-end: 5px;
-  margin: 0;
   padding: 5px;
   text-transform: capitalize;
 }

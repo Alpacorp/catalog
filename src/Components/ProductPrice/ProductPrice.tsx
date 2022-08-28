@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import Price from "../Price/Price";
 import PriceDiscount from "../PriceDiscount/PriceDiscount";
 import "./ProductPrice.css";
@@ -26,12 +25,6 @@ const ProductPrice: React.FC<ProductPriceProps> = ({
       )}
     </div>
   );
-};
-
-ProductPrice.propTypes = {
-  discount: PropTypes.number,
-  price: PropTypes.number.isRequired,
-  // formatPrice: PropTypes.object,
 };
 
 export default ProductPrice;
