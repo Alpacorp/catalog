@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "../Pages/Home";
-import NotFound from "../Pages/NotFound";
 
 const AppRoutes: React.FC = () => {
   return (
@@ -9,7 +8,7 @@ const AppRoutes: React.FC = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </Layout>
     </>
