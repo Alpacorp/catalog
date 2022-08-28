@@ -1,5 +1,4 @@
 import { memo, useEffect, useState } from "react";
-import PropTypes from "prop-types";
 import { useDispatch, useSelector } from "react-redux";
 import ProductList from "../Product/ProductList";
 import ModalProduct from "../ModalProduct/ModalProduct";
@@ -62,7 +61,6 @@ const Categories: React.FC = () => {
     const filterProduct = products[0]?.data?.filter(
       (product: any) => product.category === id
     );
-
     if (id === 0) {
       setProductsList(products[0]?.data);
     } else {
@@ -123,11 +121,6 @@ const Categories: React.FC = () => {
       </section>
     </>
   );
-};
-
-Categories.propTypes = {
-  categories: PropTypes.object.isRequired,
-  products: PropTypes.object.isRequired,
 };
 
 export default memo(Categories);

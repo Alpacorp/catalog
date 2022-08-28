@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import "./ProductImage.css";
 
 interface ProductImageProps {
@@ -30,13 +29,6 @@ const ProductImage: React.FC<ProductImageProps> = ({
       </div>
     </>
   );
-};
-
-ProductImage.propTypes = {
-  id: PropTypes.number.isRequired,
-  image: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  styleImg: PropTypes.string,
 };
 
 export default ProductImage;

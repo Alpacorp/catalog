@@ -1,3 +1,4 @@
+import { AnyAction } from "redux";
 import { getCategoriesAction } from "../constants/ActionTypes";
 
 const initialState = {
@@ -6,7 +7,10 @@ const initialState = {
   error: null,
 };
 
-export const getCategoriesReducer = (state = initialState, action) => {
+export const getCategoriesReducer = (
+  state = initialState,
+  action: AnyAction
+) => {
   switch (action.type) {
     case getCategoriesAction.GET_CATEGORIES:
       return { ...state, loading: true };
