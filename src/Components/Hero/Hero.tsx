@@ -1,7 +1,7 @@
 import "./Hero.css";
 import { BannerMain, Profile } from "../assets";
 
-const Hero: React.FC = () => {
+const Hero = () => {
   console.log("cargue de hero");
   return (
     <header className="hero">

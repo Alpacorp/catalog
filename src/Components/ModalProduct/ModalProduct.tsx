@@ -1,4 +1,10 @@
-import React, { memo, useCallback, useState, useEffect } from "react";
+import React, {
+  memo,
+  useCallback,
+  useState,
+  useEffect,
+  MouseEventHandler,
+} from "react";
 import "./ModalProduct.css";
 import ProductImage from "../ProductImage/ProductImage";
 import ProductPrice from "../ProductPrice/ProductPrice";
@@ -12,7 +18,7 @@ import { formatPrice } from "../../utils/formatPrice.";
 const ModalProduct = () => {
   console.log("cargue de modal");
   const dispatch = useDispatch();
-  const [modalState, setModalState] = useState(false);
+  const [modalState, setModalState] = useState<Boolean>(false);
   const {
     open,
     product,
@@ -31,11 +37,11 @@ const ModalProduct = () => {
     showHideModalProduct();
   }, [product, showHideModalProduct]);
 
-  const handleAddToCart = (): void => {
+  const handleAddToCart: MouseEventHandler<HTMLButtonElement> = (): void => {
     dispatch(addToCartSuccess(product));
   };
 
-  const hideModal = useCallback(() => {
+  const hideModal: MouseEventHandler<HTMLButtonElement> = useCallback(() => {
     dispatch(resetModalProduct());
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [setModalState]);
@@ -80,10 +86,7 @@ const ModalProduct = () => {
               />
               <Counter />
               <div className="add-car">
-                <button
-                  onClick={() => handleAddToCart()}
-                  title={"Agregar al Carrito"}
-                >
+                <button onClick={handleAddToCart} title={"Agregar al Carrito"}>
                   Agregar al Carrito
                 </button>
               </div>

@@ -5,7 +5,7 @@ interface ProductListProps {
   products: string[];
 }
 
-const ProductList: React.FC<ProductListProps> = ({ products }) => {
+const ProductList = ({ products }: ProductListProps) => {
   console.log("cargue de lista de productos");
   return (
     <div>

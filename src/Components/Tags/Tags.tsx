@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import "./Tags.css";
 
 interface TagsProps {
@@ -6,7 +5,7 @@ interface TagsProps {
   id: number;
 }
 
-const Tags: React.FC<TagsProps> = ({ tags, id }) => {
+const Tags = ({ tags, id }: TagsProps) => {
   return (
     <div data-testid="test-div-tags" className="tags" tabIndex={0}>
       {tags?.map((tag) => (
@@ -21,11 +20,6 @@ const Tags: React.FC<TagsProps> = ({ tags, id }) => {
       ))}
     </div>
   );
-};
-
-Tags.propTypes = {
-  tags: PropTypes.array.isRequired,
-  id: PropTypes.number.isRequired,
 };
 
 export default Tags;

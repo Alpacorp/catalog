@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import "./PriceDiscount.css";
 
 interface PriceDiscountProps {
@@ -6,10 +5,7 @@ interface PriceDiscountProps {
   formatPrice: any;
 }
 
-const PriceDiscount: React.FC<PriceDiscountProps> = ({
-  price,
-  formatPrice,
-}) => {
+const PriceDiscount = ({ price, formatPrice }: PriceDiscountProps) => {
   return (
     <div>
       <h3 className="price-discount" tabIndex={0}>
@@ -17,11 +13,6 @@ const PriceDiscount: React.FC<PriceDiscountProps> = ({
       </h3>
     </div>
   );
-};
-
-PriceDiscount.propTypes = {
-  price: PropTypes.number.isRequired,
-  formatPrice: PropTypes.object.isRequired,
 };
 
 export default PriceDiscount;

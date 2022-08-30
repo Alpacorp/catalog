@@ -8,11 +8,7 @@ interface ProductPriceProps {
   formatPrice?: any;
 }
 
-const ProductPrice: React.FC<ProductPriceProps> = ({
-  discount,
-  price,
-  formatPrice,
-}) => {
+const ProductPrice = ({ discount, price, formatPrice }: ProductPriceProps) => {
   return (
     <div data-testid="test-div-product-price" className="product-price">
       {discount ? (

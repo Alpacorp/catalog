@@ -6,7 +6,7 @@ interface FeaturesProps {
   id: number;
 }
 
-const Features: React.FC<FeaturesProps> = ({ features, id }) => {
+const Features = ({ features, id }: FeaturesProps) => {
   return (
     <div className="features" tabIndex={0}>
       {features?.map((feature) => (

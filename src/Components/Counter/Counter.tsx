@@ -1,13 +1,14 @@
-import { useState } from "react";
+import { MouseEventHandler, useState } from "react";
 import "./Counter.css";
 
-const Counter = () => {
-  const [count, setCount] = useState(1);
-  const handleIncrement = () => {
+const Counter: React.FC = () => {
+  const [count, setCount] = useState<number>(1);
+
+  const handleIncrement: MouseEventHandler<HTMLButtonElement> = (): void => {
     setCount((prev) => prev + 1);
   };
 
-  const handleDecrement = () => {
+  const handleDecrement: MouseEventHandler<HTMLButtonElement> = (): void => {
     setCount(count === 1 ? 1 : (prev) => prev - 1);
   };
 
