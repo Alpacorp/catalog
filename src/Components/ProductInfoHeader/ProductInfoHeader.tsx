@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import "./ProductInfoHeader.css";
 
 interface ProductInfoHeaderProps {
@@ -6,10 +5,7 @@ interface ProductInfoHeaderProps {
   name: string;
 }
 
-const ProductInfoHeader: React.FC<ProductInfoHeaderProps> = ({
-  promo,
-  name,
-}) => {
+const ProductInfoHeader = ({ promo, name }: ProductInfoHeaderProps) => {
   return (
     <>
       <div
@@ -40,11 +36,6 @@ const ProductInfoHeader: React.FC<ProductInfoHeaderProps> = ({
       </div>
     </>
   );
-};
-
-ProductInfoHeader.propTypes = {
-  promo: PropTypes.bool,
-  name: PropTypes.string.isRequired,
 };
 
 export default ProductInfoHeader;

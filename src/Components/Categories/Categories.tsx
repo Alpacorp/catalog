@@ -16,12 +16,12 @@ import { getCategories } from "../../apis/data";
 import { getProducts } from "../../apis/data";
 import "./Categories.css";
 
-const Categories: React.FC = () => {
+const Categories = () => {
   console.log("cargue de categoria");
   const dispatch = useDispatch();
   const { products } = useSelector((state: any) => state.products);
   const { categories, loading } = useSelector((state: any) => state.categories);
-  const [categoriesList, setCategoriesList] = useState<any>([]);
+  const [categoriesList, setCategoriesList] = useState<any[]>([]);
   const [loadingView, setLoadingView] = useState<Boolean>(false);
   const [productsList, setProductsList] = useState<string[]>([]);
 

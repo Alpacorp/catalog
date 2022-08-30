@@ -1,15 +1,11 @@
 import "./PageTitle.css";
-import PropTypes from "prop-types";
 
 interface PageTitleProps {
   titleText: string;
   styleType: string;
 }
 
-const PageTitle: React.FC<PageTitleProps> = ({
-  titleText,
-  styleType,
-}: PageTitleProps) => {
+const PageTitle = ({ titleText, styleType }: PageTitleProps) => {
   return (
     <>
       <section className={styleType}>
@@ -19,11 +15,6 @@ const PageTitle: React.FC<PageTitleProps> = ({
       </section>
     </>
   );
-};
-
-PageTitle.propTypes = {
-  titleText: PropTypes.string.isRequired,
-  styleType: PropTypes.string.isRequired,
 };
 
 export default PageTitle;

@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./Layout";
 import Home from "../Pages/Home";
 
-const AppRoutes: React.FC = () => {
+const AppRoutes = () => {
   return (
     <>
       <Layout>

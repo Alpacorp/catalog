@@ -7,12 +7,7 @@ interface ProductImageProps {
   styleImg?: string;
 }
 
-const ProductImage: React.FC<ProductImageProps> = ({
-  id,
-  image,
-  name,
-  styleImg,
-}) => {
+const ProductImage = ({ id, image, name, styleImg }: ProductImageProps) => {
   return (
     <>
       <div

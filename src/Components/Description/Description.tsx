@@ -6,10 +6,7 @@ interface DescriptionProps {
   styleDesc?: string;
 }
 
-const Description: React.FC<DescriptionProps> = ({
-  description,
-  styleDesc,
-}) => {
+const Description = ({ description, styleDesc }: DescriptionProps) => {
   return (
     <>
       <p className={styleDesc} aria-label={description} tabIndex={0}>

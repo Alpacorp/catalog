@@ -1,15 +1,11 @@
 import "./PageSubtitle.css";
-import PropTypes from "prop-types";
 
 interface PageSubtitleProps {
   titleText: string;
   styleType: string;
 }
 
-const PageSubtitle: React.FC<PageSubtitleProps> = ({
-  titleText,
-  styleType,
-}) => {
+const PageSubtitle = ({ titleText, styleType }: PageSubtitleProps) => {
   return (
     <>
       <section className={styleType}>
@@ -19,11 +15,6 @@ const PageSubtitle: React.FC<PageSubtitleProps> = ({
       </section>
     </>
   );
-};
-
-PageSubtitle.propTypes = {
-  titleText: PropTypes.string.isRequired,
-  styleType: PropTypes.string.isRequired,
 };
 
 export default PageSubtitle;

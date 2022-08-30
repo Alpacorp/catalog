@@ -1,5 +1,4 @@
-import React, { memo } from "react";
-import PropTypes from "prop-types";
+import { memo } from "react";
 import { useDispatch } from "react-redux";
 import { formatPrice } from "../../utils/formatPrice.";
 import ProductImage from "../ProductImage/ProductImage";
@@ -22,7 +21,7 @@ interface ProductProps {
   description: string;
 }
 
-const Product: React.FC<ProductProps> = (product: ProductProps) => {
+const Product = (product: ProductProps) => {
   console.log("cargue de producto");
   const { id, name, price, features, tags, image, discount, promo } = product;
   console.log("product", typeof product);
@@ -58,18 +57,6 @@ const Product: React.FC<ProductProps> = (product: ProductProps) => {
       </section>
     </>
   );
-};
-
-Product.propTypes = {
-  id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
-  price: PropTypes.number.isRequired,
-  description: PropTypes.string.isRequired,
-  features: PropTypes.array,
-  tags: PropTypes.array,
-  image: PropTypes.any.isRequired,
-  discount: PropTypes.number,
-  promo: PropTypes.bool,
 };
 
 export default memo(Product);
