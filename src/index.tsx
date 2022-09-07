@@ -33,6 +33,11 @@ const root = ReactDOM.createRoot(
 const maintenance = process.env.REACT_APP_MAINTENANCE || "false";
 console.log("maintenancee", typeof maintenance);
 
+//obtai url params
+const urlParams = new URLSearchParams(window.location.search);
+const utmSource = urlParams.get("utm_source");
+console.log("utmSource", utmSource);
+
 root.render(
   <React.StrictMode>
     <BrowserRouter>
