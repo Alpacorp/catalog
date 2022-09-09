@@ -1,16 +1,26 @@
-import { MouseEventHandler, useState } from "react";
+import { MouseEventHandler, useState, useEffect } from "react";
 import "./Counter.css";
 
-const Counter: React.FC = () => {
+interface CounterProps {
+  setCounter?: any;
+}
+
+const Counter: React.FC<CounterProps> = ({ setCounter }) => {
   const [count, setCount] = useState<number>(1);
 
   const handleIncrement: MouseEventHandler<HTMLButtonElement> = (): void => {
-    setCount((prev) => prev + 1);
+    setCount((prev: number) => prev + 1);
+    setCounter((prev: number) => prev + 1);
   };
 
   const handleDecrement: MouseEventHandler<HTMLButtonElement> = (): void => {
-    setCount(count === 1 ? 1 : (prev) => prev - 1);
+    setCount(count === 1 ? 1 : (prev: number) => prev - 1);
+    setCounter(count === 1 ? 1 : (prev: number) => prev - 1);
   };
+
+  useEffect(() => {
+    setCounter(count);
+  }, [count]);
 
   return (
     <section className="counter">
