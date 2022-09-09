@@ -19,7 +19,7 @@ const ModalProduct = () => {
   console.log("cargue de modal");
   const dispatch = useDispatch();
   const [modalState, setModalState] = useState<Boolean>(false);
-  const {
+  let {
     open,
     product,
     product: { id, image, name, price, discount, description, quantity },
