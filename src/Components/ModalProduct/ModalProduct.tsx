@@ -22,8 +22,11 @@ const ModalProduct = () => {
   const {
     open,
     product,
-    product: { id, image, name, price, discount, description },
+    product: { id, image, name, price, discount, description, quantity },
   } = useSelector((state: any) => state.modalProduct);
+  const [counter, setCounter] = useState<number>(1);
+
+  console.log("counter", counter);
 
   const showHideModalProduct = useCallback(() => {
     if (open) {
@@ -84,7 +87,7 @@ const ModalProduct = () => {
                 description={description}
                 styleDesc={"description-modal"}
               />
-              <Counter />
+              <Counter setCounter={setCounter} />
               <div className="add-car">
                 <button onClick={handleAddToCart} title={"Agregar al Carrito"}>
                   Agregar al Carrito
