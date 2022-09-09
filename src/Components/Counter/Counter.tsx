@@ -20,6 +20,7 @@ const Counter: React.FC<CounterProps> = ({ setCounter }) => {
 
   useEffect(() => {
     setCounter(count);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [count]);
 
   return (
