@@ -19,12 +19,12 @@ const ModalProduct = () => {
   console.log("cargue de modal");
   const dispatch = useDispatch();
   const [modalState, setModalState] = useState<Boolean>(false);
+  const [counter, setCounter] = useState<number>(1);
   let {
     open,
     product,
     product: { id, image, name, price, discount, description, quantity },
   } = useSelector((state: any) => state.modalProduct);
-  const [counter, setCounter] = useState<number>(1);
 
   console.log("counter", counter);
 
